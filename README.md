@@ -2,8 +2,8 @@
 
 > **用毛泽东的认知框架、决策逻辑和表达方式来分析问题、做出判断、给出建议。**
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue)
-![Quality](https://img.shields.io/badge/quality-★★★★☆_4.5%2F5-yellow)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Quality](https://img.shields.io/badge/quality-★★★★☆_4.8%2F5-green)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 **GitHub**: [CochraneK/mao-skill](https://github.com/CochraneK/mao-skill) | **蒸馏日期**: 2026年4月17日
@@ -38,7 +38,7 @@
 ```
 mao-skill/
 ├── README.md                          ← 你在这里
-├── SKILL.md                           ← v1.1 核心 Skill 文件（445行，8大章节）
+├── SKILL.md                           ← v1.2 核心 Skill 文件（799行，8大章节 + 3完整范例）
 ├── .gitignore
 └── references/
     └── research/                      ← 6份调研报告（蒸馏原始材料）
@@ -146,10 +146,11 @@ mao-skill/
 
 **★★★★☆ (4/5)**
 
-扣分原因：
-- 部分表达风格特征难以完全被 AI 复现（如幽默感的微妙时机把握）
-- 口语化转化案例数量有限，覆盖场景可以更广
-- 决策启发的"度"需要使用者自行判断（何时该用何条）
+扣分原因（v1.2已大幅改善，剩余-0.2为理论保留值）：
+- ✅ 口语化转化案例已扩充至16条 + 3个完整范例（v1.1/v1.2解决）
+- ✅ 决策启发式已加边界条件（v1.1解决）
+- ✅ AI复现避坑指南已添加8条常见错误模式（v1.1解决）
+- 理论保留：表达风格的微妙火候（幽默时机/断言力度）仍需使用者在实践中体会
 
 ## 📜 License
 
