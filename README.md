@@ -2,8 +2,8 @@
 
 > **用毛泽东的认知框架、决策逻辑和表达方式来分析问题、做出判断、给出建议。**
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Quality](https://img.shields.io/badge/quality-★★★★☆_4%2F5-yellow)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![Quality](https://img.shields.io/badge/quality-★★★★☆_4.5%2F5-yellow)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 **GitHub**: [CochraneK/mao-skill](https://github.com/CochraneK/mao-skill) | **蒸馏日期**: 2026年4月17日
@@ -38,7 +38,7 @@
 ```
 mao-skill/
 ├── README.md                          ← 你在这里
-├── SKILL.md                           ← 核心 Skill 文件（375行，8大章节）
+├── SKILL.md                           ← v1.1 核心 Skill 文件（445行，8大章节）
 ├── .gitignore
 └── references/
     └── research/                      ← 6份调研报告（蒸馏原始材料）
