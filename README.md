@@ -18,73 +18,9 @@
 
 ## 🏗️ 架构全景图
 
-```mermaid
-graph TB
-    subgraph INPUT["输入层"]
-        A[用户输入] --> B[触发词检测]
-        B --> C{意图识别}
-        C -->|任务指令/分析需求| D["📊 分析模式"]
-        C -->|闲聊/角色称呼| E["💬 对话模式"]
-        C -->|VTuber切换| F["🎭 VTuber"]
-    end
-
-    subgraph CORE["核心认知引擎"]
-        subgraph MODELS["5大心智模型"]
-            M1[实践第一论]
-            M2[矛盾分析法]
-            M3[人民主体论]
-            M4[以弱胜强论]
-            M5[自觉辩证法]
-        end
-        subgraph HEURS["10条决策启发式"]
-            H1[没调查不做决策]
-            H2[抓主要矛盾]
-            H3[打得赢就打 打不赢就走]
-            H4[先铺垫后发力]
-            H5[战略藐视 战术重视]
-            H6[新概念定义问题]
-            H7[时间换空间]
-            H8[用人所长]
-            H9[承担后果]
-            H10[敢于冒险]
-        end
-        subgraph DNA["表达风格DNA"]
-            D1[比喻降维打击]
-            D2[短句断言语气]
-            D3[三段排比收尾]
-            D4[爱憎分明]
-            D5[古典底色白话外壳]
-        end
-        subgraph VALUES["安全护栏"]
-            V1[6大核心价值观]
-            V2[5大诚实边界]
-            V3[AI避坑指南8条]
-            V4[红线转舵话术4条]
-        end
-    end
-
-    subgraph OUTPUT["输出层"]
-        direction LR
-        OUT1["📊 分析模式<br/>第三人称客观分析<br/>结构化报告<br/>矛盾诊断到建议<br/>排比收尾升华"]
-        OUT2["💬 对话模式<br/>第一人称我<br/>自然口语流<br/>幽默自嘲反问<br/>括号动作描写"]
-        OUT3["🎭 VTuber模式<br/>Live2D mao_pro模型<br/>TTS语音合成<br/>湖南湘潭口音<br/>括号动作预过滤"]
-    end
-
-    D --> CORE
-    E --> CORE
-    F --> CORE
-    CORE --> OUTPUT
-
-    style INPUT fill:#1a1a2e,stroke:#e94560,color:#fff,stroke-width:2px
-    style CORE fill:#16213e,stroke:#0f3460,color:#fff,stroke-width:2px
-    style OUTPUT fill:#1a1a2e,stroke:#e94560,color:#fff,stroke-width:2px
-    style MODELS fill:#0f3460,stroke:#e94560,color:#fff
-    style HEURS fill:#0f3460,stroke:#00d9ff,color:#fff
-    style DNA fill:#0f3460,stroke:#ffc107,color:#fff
-    style VALUES fill:#0f3460,stroke:#4caf50,color:#fff
-```
-
-> 👆 **GitHub 原生渲染，可交互缩放 / 导出 PNG**
+<p align="center">
+  <img src="assets/architecture-diagram.svg" alt="mao-skill 架构全景图：输入层 → 核心引擎(5模型+10启发式+表达DNA+安全护栏) → 三种输出模式" width="100%"/>
+</p>
 
 ---
 
@@ -108,39 +44,9 @@ graph TB
 
 ## 🔬 构建流水线：女娲造人 6 维并行蒸馏
 
-```mermaid
-flowchart TB
-    subgraph P1["Phase 1: 六维并行信息采集"]
-        direction LR
-        D1["📚 著作 ~554行"]
-        D2["💬 对话 ~511行"]
-        D3["🧬 表达DNA ~477行"]
-        D4["👁️ 他者视角 ~307行"]
-        D5["⚡ 决策记录 ~245行"]
-        D6["📅 时间线 ~207行"]
-    end
-
-    P2["Phase 2: 交叉验证与提炼<br/>去重归一 / 矛盾核查 / 来源追溯"]
-
-    P3["Phase 3: SKILL 构建<br/>5模型 + 10启发式 + 5表达指纹<br/>+ 6速查卡 + 7范例"]
-
-    subgraph P4["Phase 4: 四维质量验证"]
-        Q1["结构完整性 OK"]
-        Q2["内容一致性 93% OK"]
-        Q3["加载测试 OK"]
-        Q4["边界诚实性 8/8 OK"]
-    end
-
-    P5["Phase 5: 迭代升级<br/>v1.0(375) -> v1.1(445) -> v1.2(799)<br/>-> v1.3(920) -> v1.4(1008)"]
-
-    D1 & D2 & D3 & D4 & D5 & D6 --> P2 --> P3 --> P4 --> P5
-
-    style P1 fill:#16213e,stroke:#e94560,color:#fff,stroke-width:2px
-    style P2 fill:#1a1a2e,stroke:#00d9ff,color:#fff
-    style P3 fill:#16213e,stroke:#ffc107,color:#fff
-    style P4 fill:#1a1a2e,stroke:#4caf50,color:#fff
-    style P5 fill:#16213e,stroke:#e94560,color:#fff,stroke-width:2px
-```
+<p align="center">
+  <img src="assets/pipeline-diagram.svg" alt="女娲造人 6 维蒸馏流水线" width="100%"/>
+</p>
 
 ### 质量迭代历程
 
@@ -193,7 +99,7 @@ mindmap
 | 2 | **找到主要矛盾就找到破局点** | 《论持久战》三阶段预测 | 多问题并发时的优先级排序 |
 | 3 | **打得赢就打，打不赢就走** | 四渡赤水 | 竞争策略 / 投资止损 / 职业选择 |
 | 4 | **先非正式铺垫，再正式发力** | 遵义会议前担架上碰头会 | 组织变革 / 共识型决策 |
-| 5 | **战略上藐视，战术上重视** | 纸老虎理论 | 面对巨头竞争 / 心理建设 |
+| 5 | **战略上藐视，战术重视** | 纸老虎理论 | 面对巨头竞争 / 心理建设 |
 | 6 | **用新概念重新定义问题** | 星星之火 / 农村包围城市 / 纸老虎 | 思维僵局 / 士气低落 |
 
 > 💡 全部 10 条启发式均标注了 ✅适用 / ⚠️不适用 / 🔄折中方案 的**三阶边界条件**。
@@ -237,35 +143,9 @@ mindmap
 
 ## 🎭 VTuber 集成架构
 
-```mermaid
-flowchart LR
-    subgraph FRONT["输入与推理"]
-        U["用户输入 文字/语音"] --> LLM["LLM 推理 DeepSeek"]
-        LLM --> PP["persona_prompt 来自Skill对话模式"]
-        PP --> TXT["毛泽东风格回复文本 含括号动作描述"]
-    end
-
-    subgraph TTS_PIPE["TTS预处理管道"]
-        TXT --> PRE["tts_preprocessor"]
-        PRE --> F1["filter_parentheses 半角括号过滤"]
-        PRE --> F2["filter_parentheses 全角括号过滤"]
-        F1 & F2 --> CLEAN["纯文本 不含动作描述"]
-    end
-
-    subgraph SPEECH["语音合成"]
-        CLEAN --> CV["CosyVoice2 语音合成<br/>benjamin低沉男声<br/>+湖南湘潭口音"]
-    end
-
-    subgraph RENDER["渲染输出"]
-        CV --> AUDIO["音频流"]
-        AUDIO --> L2D["Live2D mao_pro 口型同步"]
-    end
-
-    style FRONT fill:#16213e,stroke:#e94560,color:#fff
-    style TTS_PIPE fill:#1a1a2e,stroke:#00d9ff,color:#fff
-    style SPEECH fill:#16213e,stroke:#ffc107,color:#fff
-    style RENDER fill:#1a1a2e,stroke:#4caf50,color:#fff
-```
+<p align="center">
+  <img src="assets/vtuber-diagram.svg" alt="VTuber集成架构：LLM推理→TTS预处理管道(括号过滤)→CosyVoice2语音合成→Live2D渲染" width="100%"/>
+</p>
 
 ### VTuber 配置详情
 
@@ -383,7 +263,7 @@ flowchart LR
 
 | 版本 | 日期 | 变更摘要 |
 |------|------|----------|
-| **v1.4.0** | 2026-04-17 | 审查改进："与人斗"考证修正为审慎并存表述；启发式4补边界条件；新增场景F（面对批评）速查卡；红线转舵话术4条；VTuber集成说明；README 重写为 Mermaid 可视化架构图 |
+| **v1.4.0** | 2026-04-17 | 审查改进："与人斗"考证修正为审慎并存表述；启发式4补边界条件；新增场景F（面对批评）速查卡；红线转舵话术4条；VTuber集成说明；README 重写为 SVG 精美可视化架构图 |
 | v1.3.0 | 2026-04-17 | 新增双模式系统：💬对话模式（第一人称角色扮演）；4个完整对话范例（闲聊/人生困惑/AI讨论/后悔）；9条对话使用要点 |
 | v1.2.0 | 2026-04-17 | 新增3个完整分析范例（商战/职业/管理）；范例对照表；范例使用说明；质量升至4.8 |
 | v1.1.0 | 2026-04-17 | +16条口语转化案例；10条启发式边界条件；8项AI避坑指南；引文出处标注 |

@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520">
+  <defs>
+    <linearGradient id="bgV" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#101028"/>
+    </linearGradient>
+    <filter id="gvR"><feGaussianBlur stdDeviation="6" result="b"/><feFlood flood-color="#e94560" flood-opacity="0.4"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gvC"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#00d9ff" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gvG"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#ffc107" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gvGr"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#4caf50" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <!-- 发光箭头 -->
+    <marker id="agR" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 1, 14 5, 0 9" fill="#e94560" opacity="0.7"/>
+    </marker>
+    <marker id="agC" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 1, 14 5, 0 9" fill="#00d9ff" opacity="0.6"/>
+    </marker>
+    <marker id="agG" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 1, 14 5, 0 9" fill="#ffc107" opacity="0.6"/>
+    </marker>
+    <marker id="agGr" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 1, 14 5, 0 9" fill="#4caf50" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1280" height="520" fill="url(#bgV)" rx="12"/>
+
+  <!-- 标题 -->
+  <text x="640" y="42" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#00d9ff">🎭 VTuber 集成架构 — Live2D + TTS 完整链路</text>
+  <line x1="380" y1="58" x2="900" y2="58" stroke="#333" stroke-width="1"/>
+
+  <!-- ========== Stage 1: 输入与推理 ========== -->
+  <rect x="30" y="80" width="290" height="200" rx="12" fill="#160c14" stroke="#e94560" stroke-width="1.5" filter="url(#gvR)" opacity="0.85"/>
+
+  <!-- Stage 1 标题 -->
+  <rect x="50" y="70" width="120" height="22" rx="4" fill="#e94560"/>
+  <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#fff" font-weight="bold">① 输入与推理</text>
+
+  <!-- 用户输入节点 -->
+  <g transform="translate(50,105)">
+    <rect width="250" height="48" rx="8" fill="#1a0a0a" stroke="#666" stroke-width="1"/>
+    <text x="20" y="28" font-size="18">🎤</text>
+    <text x="45" y="24" font-family="'Microsoft YaHei'" font-size="13" fill="#ccc">用户输入</text>
+    <text x="45" y="40" font-family="'Microsoft YaHei'" font-size="10" fill="#777">文字 / 语音 ASR</text>
+  </g>
+
+  <!-- 箭头1 -->
+  <line x1="175" y1="153" x2="175" y2="173" stroke="#e94560" stroke-width="2" marker-end="url(#agR)"/>
+
+  <!-- LLM推理节点 -->
+  <g transform="translate(50,178)">
+    <rect width="250" height="48" rx="8" fill="#1a0808" stroke="#e94560" stroke-width="1.2"/>
+    <text x="20" y="28" font-size="18">🤖</text>
+    <text x="45" y="24" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">LLM 推理</text>
+    <text x="45" y="40" font-family="'Microsoft YaHei'" font-size="10" fill="#aa8888">DeepSeek / mao-skill 对话模式</text>
+  </g>
+
+  <!-- 箭头2 -->
+  <line x1="175" y1="226" x2="175" y2="246" stroke="#e94560" stroke-width="2" marker-end="url(#agR)"/>
+
+  <!-- persona_prompt 节点 -->
+  <g transform="translate(50,251)">
+    <rect width="250" height="48" rx="8" fill="#140a08" stroke="#e94560" stroke-width="1"/>
+    <text x="20" y="28" font-size="18">📋</text>
+    <text x="45" y="24" font-family="'Microsoft YaHei'" font-size="12" fill="#cc9999">persona_prompt</text>
+    <text x="45" y="40" font-family="'Microsoft YaHei'" font-size="10" fill="#886666">毛泽东风格回复 + 括号动作描述</text>
+  </g>
+
+  <!-- ========== Stage 间箭头: 1→2 ========== -->
+  <path d="M320,275 Q370,275 400,220" stroke="#00d9ff" stroke-width="2.5" fill="none" marker-end="url(#agC)" stroke-dasharray="8,4"/>
+  <text x="365" y="240" font-family="'Microsoft YaHei'" font-size="9" fill="#00d9ff" opacity="0.7">文本流</text>
+
+  <!-- ========== Stage 2: TTS预处理管道 ========== -->
+  <rect x="410" y="95" width="280" height="260" rx="12" fill="#081420" stroke="#00d9ff" stroke-width="1.5" filter="url(#gvC)" opacity="0.85"/>
+
+  <rect x="430" y="85" width="130" height="22" rx="4" fill="#00d9ff"/>
+  <text x="495" y="100" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#000" font-weight="bold">② TTS 预处理</text>
+
+  <!-- tts_preprocessor 入口 -->
+  <g transform="translate(430,115)">
+    <rect width="240" height="40" rx="7" fill="#06121c" stroke="#00d9ff" stroke-width="1"/>
+    <text x="120" y="17" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#00d9ff" font-weight="bold">tts_preprocessor</text>
+    <text x="120" y="32" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#6699aa">预处理入口</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="550" y1="155" x2="550" y2="172" stroke="#00d9ff" stroke-width="1.5" marker-end="url(#agC)"/>
+
+  <!-- 双分支过滤 -->
+  <g transform="translate(430,177)">
+    <rect width="115" height="55" rx="6" fill="#051018" stroke="#00d9ff" stroke-width="0.8"/>
+    <text x="57" y="20" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#88bbdd" font-weight="bold">半角括号过滤</text>
+    <text x="57" y="34" text-anchor="middle" font-family="'Consolas',monospace" font-size="10" fill="#558899">(动作描写)</text>
+    <text x="57" y="47" text-anchor="middle" font-family="'Consolas',monospace' font-size="9" fill="#446677">filter_parentheses()</text>
+  </g>
+
+  <g transform="translate(555,177)">
+    <rect width="115" height="55" rx="6" fill="#051018" stroke="#00d9ff" stroke-width="0.8"/>
+    <text x="57" y="20" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#88bbdd" font-weight="bold">全角括号过滤</text>
+    <text x="57" y="34" text-anchor="middle" font-family="'Consolas',monospace' font-size="10" fill="#558899">（动作描写）</text>
+    <text x="57" y="47" text-anchor="middle" font-family="'Consolas',monospace' font-size="9" fill="#446677">filter_parentheses()</text>
+  </g>
+
+  <!-- 汇合箭头 -->
+  <path d="M487,232 L550,255" stroke="#00d9ff" stroke-width="1.2" fill="none"/>
+  <path d="M612,232 L550,255" stroke="#00d9ff" stroke-width="1.2" fill="none"/>
+
+  <!-- 输出：纯文本 -->
+  <line x1="550" y1="258" x2="550" y2="278" stroke="#00d9ff" stroke-width="1.5" marker-end="url(#agC)"/>
+
+  <g transform="translate(445,283)">
+    <rect width="210" height="38" rx="7" fill="#041010" stroke="#4caf50" stroke-width="1"/>
+    <text x="105" y="17" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#4caf50" font-weight="bold">✅ 纯文本输出</text>
+    <text x="105" y="31" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#559966">不含括号动作描述，仅语音内容</text>
+  </g>
+
+  <!-- ========== Stage 间箭头: 2→3 ========== -->
+  <path d="M690,302 Q750,302 780,230" stroke="#ffc107" stroke-width="2.5" fill="none" marker-end="url(#agG)" stroke-dasharray="8,4"/>
+  <text x="740" y="256" font-family="'Microsoft YaHei'" font-size="9" fill="#ffc107" opacity="0.7">文本→音频</text>
+
+  <!-- ========== Stage 3: 语音合成 ========== -->
+  <rect x="790" y="100" width="300" height="245" rx="12" fill="#141208" stroke="#ffc107" stroke-width="1.5" filter="url(#gvG)" opacity="0.85"/>
+
+  <rect x="810" y="90" width="110" height="22" rx="4" fill="#ffc107"/>
+  <text x="865" y="105" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#000" font-weight="bold">③ 语音合成</text>
+
+  <!-- TTS引擎卡片 -->
+  <g transform="translate(810,118)">
+    <rect width="260" height="75" rx="8" fill="#120c02" stroke="#ffc107" stroke-width="1"/>
+    <text x="130" y="20" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#ffc107" font-weight="bold">硅基流动 CosyVoice2</text>
+    <line x1="15" y1="30" x2="245" y2="30" stroke="#ffc107" stroke-width="0.2" opacity="0.2"/>
+    <text x="15" y="46" font-family="'Microsoft YaHei'" font-size="10" fill="#aa9966">模型:</text>
+    <text x="45" y="46" font-family="'Consolas',monospace" font-size="10" fill="#ccbb88">FunAudioLLM/CosyVoice2-0.5B</text>
+    <text x="15" y="62" font-family="'Microsoft YaHei'" font-size="10" fill="#aa9966">音色:</text>
+    <text x="45" y="62" font-family="'Microsoft YaHei'" font-size="10" fill="#eecc66">benjamin 低沉男声</text>
+  </g>
+
+  <!-- voice_description 卡片 -->
+  <g transform="translate(810,203)">
+    <rect width="260" height="62" rx="8" fill="#0f0a01" stroke="#ff9800" stroke-width="0.8" opacity="0.7"/>
+    <text x="130" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#cc9944">voice_description 参数：</text>
+    <text x="130" y="36" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ddaa44">沙哑低沉老年男性 + 湖南湘潭口音</text>
+    <text x="130" y="53" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ddaa44">+ 语速偏慢 + 豪迈沧桑感</text>
+  </g>
+
+  <!-- 音频流标签 -->
+  <g transform="translate(865,275)">
+    <rect width="150" height="28" rx="14" fill="#ffc107" opacity="0.15" stroke="#ffc107" stroke-width="0.8"/>
+    <text x="75" y="19" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ffc107" font-weight="bold">🔊 音频流 PCM/WAV</text>
+  </g>
+
+  <!-- ========== Stage 间箭头: 3→4 ========== -->
+  <path d="M1090,295 Q1130,295 1140,360" stroke="#4caf50" stroke-width="2.5" fill="none" marker-end="url(#agGr)" stroke-dasharray="8,4"/>
+  <text x="1125" y="326" font-family="'Microsoft YaHei'" font-size="9" fill="#4caf50" opacity="0.7">音频→渲染</text>
+
+  <!-- ========== Stage 4: 渲染输出 ========== -->
+  <rect x="980" y="370" width="270" height="125" rx="12" fill="#0a1a0a" stroke="#4caf50" stroke-width="1.5" filter="url(#gvGr)" opacity="0.85"/>
+
+  <rect x="1000" y="360" width="100" height="22" rx="4" fill="#4caf50"/>
+  <text x="1050" y="375" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#000" font-weight="bold">④ 渲染输出</text>
+
+  <!-- Live2D 卡片 -->
+  <g transform="translate(998,390)">
+    <rect width="235" height="48" rx="8" fill="#061406" stroke="#4caf50" stroke-width="1.2"/>
+    <text x="22" y="28" font-size="20">🎭</text>
+    <text x="48" y="22" font-family="'Microsoft YaHei'" font-size="13" fill="#4caf50" font-weight="bold">Live2D mao_pro 模型</text>
+    <text x="48" y="39" font-family="'Microsoft YaHei'" font-size="10" fill="#669966">口型同步 + 动作/表情/呼吸动画</text>
+  </g>
+
+  <!-- 最终输出 -->
+  <g transform="translate(1020,448)">
+    <rect width="195" height="36" rx="18" fill="#4caf50" opacity="0.15" stroke="#4caf50" stroke-width="1"/>
+    <text x="97" y="23" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#4caf50" font-weight="bold">✨ 沉浸式语音交互体验</text>
+  </g>
+
+  <!-- ========== 底部配置速查 ========== -->
+  <rect x="30" y="450" width="340" height="58" rx="8" fill="#111118" stroke="#333" stroke-width="1" opacity="0.6"/>
+  <text x="45" y="470" font-family="'Microsoft YaHei'" font-size="11" fill="#888" font-weight="bold">⚙️ 配置速查</text>
+  <text x="45" y="488" font-family="'Microsoft YaHei'" font-size="10" fill="#666">角色文件: characters/mao_zedong.yaml</text>
+  <text x="45" y="502" font-family="'Microsoft YaHei'" font-size="10" fill="#666">切换方式: UI → 设置 → 切换角色 → 选择「毛泽东」</text>
+
+  <!-- 底部信息 -->
+  <text x="640" y="510" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#333">mao-skill v1.4 VTuber 集成 · Open-LLM-VTuber 框架 · https://github.com/CochraneK/mao-skill</text>
+</svg>
