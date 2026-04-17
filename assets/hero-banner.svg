@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="50%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <!-- 标题金色渐变 -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f4d03f"/>
+      <stop offset="50%" style="stop-color:#ffc107"/>
+      <stop offset="100%" style="stop-color:#ff9800"/>
+    </linearGradient>
+    <!-- 红色发光 -->
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#e94560" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 金色发光 -->
+    <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#ffc107" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 青色发光 -->
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#00d9ff" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 节点渐变 -->
+    <radialGradient id="nodeRed"><stop offset="0%" stop-color="#e94560"/><stop offset="100%" stop-color="#c73e54"/></radialGradient>
+    <radialGradient id="nodeGold"><stop offset="0%" stop-color="#ffc107"/><stop offset="100%" stop-color="#ff9800"/></radialGradient>
+    <radialGradient id="nodeCyan"><stop offset="0%" stop-color="#00d9ff"/><stop offset="100%" stop-color:#0099cc"/></radialGradient>
+    <radialGradient id="nodeGreen"><stop offset="0%" stop-color="#4caf50"/><stop offset="100%" stop-color="#388e3c"/></radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+
+  <!-- 装饰性背景元素：水墨纹理感 -->
+  <circle cx="1100" cy="120" r="200" fill="#e94560" opacity="0.03"/>
+  <circle cx="150" cy="600" r="250" fill="#00d9ff" opacity="0.03"/>
+  <circle cx="640" cy="500" r="300" fill="#ffc107" opacity="0.02"/>
+
+  <!-- 顶部装饰线 -->
+  <line x1="80" y1="40" x2="400" y2="40" stroke="#e94560" stroke-width="2" opacity="0.5"/>
+  <line x1="880" y1="40" x2="1200" y2="40" stroke="#e94560" stroke-width="2" opacity="0.5"/>
+
+  <!-- ===== 主标题区域 ===== -->
+  <text x="640" y="130" text-anchor="middle" font-family="'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="bold" fill="url(#goldGrad)" filter="url(#goldGlow)">
+    mao-skill
+  </text>
+
+  <!-- v1.4 徽章 -->
+  <rect x="770" y="88" width="90" height="36" rx="18" fill="#e94560" filter="url(#redGlow)"/>
+  <text x="815" y="113" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="bold" fill="#fff">v1.4</text>
+
+  <!-- 副标题 -->
+  <text x="640" y="180" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="26" fill="#b0b0c0" letter-spacing="4">
+    毛泽东思维视角 AI Skill · 认知框架 × 决策逻辑 × 表达风格
+  </text>
+
+  <!-- 分隔线 -->
+  <line x1="340" y1="210" x2="940" y2="210" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
+
+  <!-- ===== 中间：5大心智模型节点（半圆排列）===== -->
+  
+  <!-- 连接线：从中心到各节点（先画线，再画节点覆盖） -->
+  <!-- 左1: 实践论 -->
+  <path d="M520,340 Q380,320 260,280" stroke="#e94560" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- 左2: 矛盾分析法 -->
+  <path d="M540,360 Q420,370 280,380" stroke="#ffc107" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- 中下: 人民主体论 -->
+  <path d="M640,385 L640,450" stroke="#4caf50" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- 右2: 以弱胜强 -->
+  <path d="M740,360 Q860,370 1000,380" stroke="#00d9ff" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- 右1: 辩证法 -->
+  <path d="M760,340 Q900,320 1020,280" stroke="#e94560" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- 中心大脑图标/核心引擎 -->
+  <circle cx="640" cy="340" r="55" fill="none" stroke="#ffc107" stroke-width="2" opacity="0.3"/>
+  <circle cx="640" cy="340" r="45" fill="#16213e" stroke="#ffc107" stroke-width="1.5" opacity="0.6"/>
+  <text x="640" y="333" text-anchor="middle" font-size="22" fill="#ffc107">🧠</text>
+  <text x="640" y="355" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#ffc107">认知引擎</text>
+
+  <!-- 节点1: 实践论 (左上) -->
+  <circle cx="230" cy="265" r="42" fill="url(#nodeRed)" opacity="0.15" stroke="#e94560" stroke-width="1.5"/>
+  <circle cx="230" cy="265" r="32" fill="url(#nodeRed)" filter="url(#redGlow)" opacity="0.85"/>
+  <text x="230" y="260" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#fff" font-weight="bold">实践论</text>
+  <text x="230" y="278" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#ffd0d0">《实践论》1937</text>
+
+  <!-- 节点2: 矛盾分析法 (左中) -->
+  <circle cx="250" cy="380" r="42" fill="url(#nodeGold)" opacity="0.15" stroke="#ffc107" stroke-width="1.5"/>
+  <circle cx="250" cy="380" r="32" fill="url(#nodeGold)" filter="url(#goldGlow)" opacity="0.85"/>
+  <text x="250" y="375" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#1a1a2e" font-weight="bold">矛盾分析法</text>
+  <text x="250" y="393" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#3a2a00">《矛盾论》1937</text>
+
+  <!-- 节点3: 人民主体论 (正下) -->
+  <circle cx="640" cy="480" r="42" fill="url(#nodeGreen)" opacity="0.15" stroke="#4caf50" stroke-width="1.5"/>
+  <circle cx="640" cy="480" r="32" fill="url(#nodeGreen)" filter="url(#goldGlow)" opacity="0.85"/>
+  <text x="640" y="475" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#fff" font-weight="bold">人民主体论</text>
+  <text x="640" y="493" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#d0f0d0">兵民是胜利之本</text>
+
+  <!-- 节点4: 以弱胜强 (右中) -->
+  <circle cx="1030" cy="380" r="42" fill="url(#nodeCyan)" opacity="0.15" stroke="#00d9ff" stroke-width="1.5"/>
+  <circle cx="1030" cy="380" r="32" fill="url(#nodeCyan)" filter="url(#cyanGlow)" opacity="0.85"/>
+  <text x="1030" y="375" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#fff" font-weight="bold">以弱胜强</text>
+  <text x="1030" y="393" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#d0f0ff">纸老虎战略</text>
+
+  <!-- 节点5: 自觉辩证法 (右上) -->
+  <circle cx="1050" cy="265" r="42" fill="url(#nodeRed)" opacity="0.15" stroke="#e94560" stroke-width="1.5"/>
+  <circle cx="1050" cy="265" r="32" fill="url(#nodeRed)" filter="url(#redGlow)" opacity="0.85"/>
+  <text x="1050" y="260" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#fff" font-weight="bold">自觉辩证法</text>
+  <text x="1050" y="278" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#ffd0d0">好坏互相转化</text>
+
+  <!-- ===== 底部：三大输出模式 ===== -->
+  
+  <!-- 底部连接线 -->
+  <path d="M640,525 L640,565" stroke="#666" stroke-width="1" stroke-dasharray="4,4"/>
+  <path d="M640,565 L350,595" stroke="#666" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <path d="M640,565 L640,595" stroke="#666" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <path d="M640,565 L930,595" stroke="#666" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- 输出模式卡片背景 -->
+  <rect x="220" y="590" rx="12" width="180" height="75" fill="#16213e" stroke="#e94560" stroke-width="1" opacity="0.8"/>
+  <rect x="550" y="590" rx="12" width="180" height="75" fill="#16213e" stroke="#ffc107" stroke-width="1" opacity="0.8"/>
+  <rect x="880" y="590" rx="12" width="180" height="75" fill="#16213e" stroke="#00d9ff" stroke-width="1" opacity="0.8"/>
+
+  <!-- 模式1: 分析 -->
+  <text x="310" y="618" text-anchor="middle" font-size="24">📊</text>
+  <text x="310" y="642" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="15" fill="#e94560" font-weight="bold">分析模式</text>
+  <text x="310" y="658" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#999">结构化报告</text>
+
+  <!-- 模式2: 对话 -->
+  <text x="640" y="618" text-anchor="middle" font-size="24">💬</text>
+  <text x="640" y="642" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="15" fill="#ffc107" font-weight="bold">对话模式</text>
+  <text x="640" y="658" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#999">第一人称闲聊</text>
+
+  <!-- 模式3: VTuber -->
+  <text x="970" y="618" text-anchor="middle" font-size="24">🎭</text>
+  <text x="970" y="642" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="15" fill="#00d9ff" font-weight="bold">VTuber 模式</text>
+  <text x="970" y="658" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#999">Live2D + TTS</text>
+
+  <!-- ===== 底部统计信息栏 ===== -->
+  <rect x="0" y="685" width="1280" height="35" fill="#0a0a15" opacity="0.8"/>
+  
+  <text x="80" y="707" font-family="'Segoe UI', sans-serif" font-size="13" fill="#888">
+    <tspan fill="#e94560">●</tspan> 5 大心智模型
+  </text>
+  <text x="280" y="707" font-family="'Segoe UI', sans-serif" font-size="13" fill="#888">
+    <tspan fill="#ffc107">●</tspan> 10 条决策启发式
+  </text>
+  <textx="520" y="707" font-family="'Segoe UI', sans-serif" font-size="13" fill="#888">
+    <tspan fill="#00d9ff">●</tspan> 16 场景范例
+  </text>
+  <text x="750" y="707" font-family="'Segoe UI', sans-serif" font-size="13" fill="#888">
+    <tspan fill="#4caf50">●</tspan> 1008 行 SKILL.md
+  </text>
+  <text x="980" y="707" font-family="'Segoe UI', sans-serif" font-size="13" fill="#888">
+    ⭐ MIT License · Open Source
+  </text>
+
+  <!-- 角落装饰：印章风格 -->
+  <rect x="1150" y="650" width="60" height="60" rx="4" fill="none" stroke="#e94560" stroke-width="1.5" opacity="0.3" transform="rotate(8 1180 680)"/>
+  <text x="1180" y="685" text-anchor="middle" font-family="'KaiTi', 'STKaiti', serif" font-size="16" fill="#e94560" opacity="0.35" transform="rotate(8 1180 680)">毛</text>
+
+  <!-- 左上角装饰 -->
+  <text x="50" y="85" font-family="'Segoe UI'" font-size="14" fill="#e94560" opacity="0.6">★ AI Skill Framework</text>
+</svg>
