@@ -28,8 +28,12 @@
   <circle cx="150" cy="600" r="280" fill="#00d9ff" opacity="0.02"/>
   <circle cx="640" cy="450" r="300" fill="#ffc107" opacity="0.015"/>
 
-  <!-- 顶部红色装饰线 -->
+  <!-- 顶部装饰线 -->
   <rect x="0" y="0" width="1280" height="3" fill="url(#gold)"/>
+
+  <!-- 左上角标签 -->
+  <rect x="30" y="20" width="145" height="24" rx="12" fill="#e94560" opacity="0.12" stroke="#e94560" stroke-width="0.5"/>
+  <text x="102" y="37" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#e94560" opacity="0.7">AI Skill Framework</text>
 
   <!-- ===== 主标题区 ===== -->
   <text x="640" y="95" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="56" font-weight="bold" fill="url(#gold)" filter="url(#glowG)">mao-skill</text>
@@ -50,102 +54,99 @@
   <line x1="400" y1="175" x2="880" y2="175" stroke="#333" stroke-width="1"/>
 
   <!-- ===== 核心引擎中心 ===== -->
-  <circle cx="640" cy="280" r="38" fill="#16213e" stroke="#e94560" stroke-width="2" filter="url(#glowR)" opacity="0.9"/>
-  <text x="640" y="275" text-anchor="middle" font-size="28">🧠</text>
-  <text x="640" y="297" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e94560" font-weight="bold">核心引擎</text>
+  <circle cx="640" cy="275" r="38" fill="#16213e" stroke="#e94560" stroke-width="2" filter="url(#glowR)" opacity="0.9"/>
+  <text x="640" y="270" text-anchor="middle" font-size="28">🧠</text>
+  <text x="640" y="292" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e94560" font-weight="bold">核心引擎</text>
 
-  <!-- ===== 5 大心智模型节点（半圆形排列）===== -->
   <!-- 连接线：从中心到各节点 -->
-  <line x1="610" y1="255" x2="280" y2="210" stroke="#e94560" stroke-width="1.5" opacity="0.4"/>
-  <line x1="650" y1="255" x2="480" y2="195" stroke="#ffc107" stroke-width="1.5" opacity="0.4"/>
-  <line x1="640" y1="318" x2="640" y2="380" stroke="#4caf50" stroke-width="1.5" opacity="0.4"/>
-  <line x1="630" y1="255" x2="800" y2="195" stroke="#00d9ff" stroke-width="1.5" opacity="0.4"/>
-  <line x1="670" y1="265" x2="1000" y2="210" stroke="#e94560" stroke-width="1.5" opacity="0.4"/>
+  <line x1="610" y1="250" x2="280" y2="205" stroke="#e94560" stroke-width="1.5" opacity="0.4"/>
+  <line x1="650" y1="250" x2="480" y2="190" stroke="#ffc107" stroke-width="1.5" opacity="0.4"/>
+  <line x1="640" y1="313" x2="640" y2="370" stroke="#4caf50" stroke-width="1.5" opacity="0.4"/>
+  <line x1="630" y1="250" x2="800" y2="190" stroke="#00d9ff" stroke-width="1.5" opacity="0.4"/>
+  <line x1="670" y1="260" x2="1000" y2="205" stroke="#e94560" stroke-width="1.5" opacity="0.4"/>
 
-  <!-- 节点1: 实践论 (红) -->
-  <g transform="translate(180,175)">
+  <!-- 节点1: 实践论 (红) - 上排最左 -->
+  <g transform="translate(175,170)">
     <circle cx="100" cy="35" r="32" fill="url(#nR)" opacity="0.85" filter="url(#glowR)"/>
     <text x="100" y="31" text-anchor="middle" font-size="18">📖</text>
     <text x="100" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#fff" font-weight="bold">实践论</text>
   </g>
 
-  <!-- 节点2: 矛盾分析法 (金) -->
-  <g transform="translate(385,160)">
+  <!-- 节点2: 矛盾分析法 (金) - 上排左中 -->
+  <g transform="translate(380,155)">
     <circle cx="95" cy="35" r="32" fill="url(#nG)" opacity="0.85" filter="url(#glowG)"/>
     <text x="95" y="31" text-anchor="middle" font-size="18">⚔️</text>
     <text x="95" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#000" font-weight="bold">矛盾分析</text>
   </g>
 
-  <!-- 节点3: 人民主体论 (绿) -->
-  <g transform="translate(545,360)">
-    <circle cx="95" cy="30" r="32" fill="url(#nGr)" opacity="0.85"/>
-    <text x="95" y="27" text-anchor="middle" font-size="18">👥</text>
-    <text x="95" y="44" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#fff" font-weight="bold">人民主体</text>
-  </g>
-
-  <!-- 节点4: 以弱胜强 (青) -->
-  <g transform="translate(755,160)">
+  <!-- 节点3: 以弱胜强 (青) - 上排右中 -->
+  <g transform="translate(750,155)">
     <circle cx="95" cy="35" r="32" fill="url(#nC)" opacity="0.85" filter="url(#glowC)"/>
     <text x="95" y="31" text-anchor="middle" font-size="18">🎯</text>
     <text x="95" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#fff" font-weight="bold">以弱胜强</text>
   </g>
 
-  <!-- 节点5: 自觉辩证法 (红) -->
-  <g transform="translate(900,175)">
+  <!-- 节点4: 自觉辩证法 (红) - 上排最右 -->
+  <g transform="translate(900,170)">
     <circle cx="100" cy="35" r="32" fill="url(#nR)" opacity="0.85" filter="url(#glowR)"/>
     <text x="100" y="31" text-anchor="middle" font-size="18">🔄</text>
     <text x="100" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#fff" font-weight="bold">辩证法</text>
   </g>
 
-  <!-- ===== 分隔区域 ===== -->
-  <line x1="80" y1="440" x2="1200" y2="440" stroke="#222" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- 节点5: 人民主体论 (绿) - 下排居中 -->
+  <g transform="translate(545,350)">
+    <circle cx="95" cy="30" r="32" fill="url(#nGr)" opacity="0.85"/>
+    <text x="95" y="27" text-anchor="middle" font-size="18">👥</text>
+    <text x="95" y="44" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#fff" font-weight="bold">人民主体</text>
+  </g>
+
+  <!-- 分隔区域线 -->
+  <line x1="80" y1="430" x2="1200" y2="430" stroke="#222" stroke-width="1" stroke-dasharray="4,4"/>
 
   <!-- ===== 三大输出模式卡片 ===== -->
+  <!-- 统一卡片: 每张宽度360, 间距=(1280-360*3)/4=50, x位置: 50/460/870 -->
+
   <!-- 卡片1: 分析模式 -->
-  <rect x="80" y="468" width="350" height="90" rx="10" fill="#161010" stroke="#e94560" stroke-width="1.2" opacity="0.85"/>
-  <text x="255" y="498" text-anchor="middle" font-size="26">📊</text>
-  <text x="255" y="522" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#e94560" font-weight="bold">分析模式</text>
-  <text x="255" y="545" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">第三人称 · 结构化报告 · 矛盾诊断到建议</text>
+  <rect x="50" y="458" width="360" height="92" rx="10" fill="#161010" stroke="#e94560" stroke-width="1.2" opacity="0.85"/>
+  <text x="230" y="488" text-anchor="middle" font-size="26">📊</text>
+  <text x="230" y="512" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#e94560" font-weight="bold">分析模式</text>
+  <text x="230" y="536" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">第三人称 · 结构化报告 · 矛盾诊断到建议</text>
 
   <!-- 卡片2: 对话模式 -->
-  <rect x="465" y="468" width="350" height="90" rx="10" fill="#161410" stroke="#ffc107" stroke-width="1.2" opacity="0.85"/>
-  <text x="640" y="498" text-anchor="middle" font-size="26">💬</text>
-  <text x="640" y="522" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#ffc107" font-weight="bold">对话模式</text>
-  <text x="640" y="545" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">第一人称「我」· 口语流 · 幽默自嘲反问</text>
+  <rect x="460" y="458" width="360" height="92" rx="10" fill="#161410" stroke="#ffc107" stroke-width="1.2" opacity="0.85"/>
+  <text x="640" y="488" text-anchor="middle" font-size="26">💬</text>
+  <text x="640" y="512" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#ffc107" font-weight="bold">对话模式</text>
+  <text x="640" y="536" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">第一人称「我」· 口语流 · 幽默自嘲反问</text>
 
   <!-- 卡片3: VTuber 模式 -->
-  <rect x="850" y="468" width="350" height="90" rx="10" fill="#101618" stroke="#00d9ff" stroke-width="1.2" opacity="0.85"/>
-  <text x="1025" y="498" text-anchor="middle" font-size="26">🎭</text>
-  <text x="1025" y="522" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#00d9ff" font-weight="bold">VTuber 模式</text>
-  <text x="1025" y="545" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">Live2D + CosyVoice2 TTS · 语音交互</text>
+  <rect x="870" y="458" width="360" height="92" rx="10" fill="#101618" stroke="#00d9ff" stroke-width="1.2" opacity="0.85"/>
+  <text x="1050" y="488" text-anchor="middle" font-size="26">🎭</text>
+  <text x="1050" y="512" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="16" fill="#00d9ff" font-weight="bold">VTuber 模式</text>
+  <text x="1050" y="536" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#999">Live2D + CosyVoice2 TTS · 语音交互</text>
 
   <!-- ===== 底部统计栏 ===== -->
-  <rect x="0" y="678" width="1280" height="42" fill="#08080f" opacity="0.85"/>
-  <text x="70" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
+  <rect x="0" y="674" width="1280" height="46" fill="#08080f" opacity="0.85"/>
+  <text x="64" y="700" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
     <tspan fill="#e94560">●</tspan> 5 大心智模型
   </text>
-  <text x="260" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
+  <text x="254" y="700" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
     <tspan fill="#ffc107">●</tspan> 10 条启发式
   </text>
-  <text x="430" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
+  <text x="424" y="700" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
     <tspan fill="#00d9ff">●</tspan> 16 场景范例
   </text>
-  <text x="600" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
+  <text x="594" y="700" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
     <tspan fill="#4caf50">●</tspan> 1008 行 SKILL.md
   </text>
-  <text x="800" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
+  <text x="784" y="700" font-family="'Segoe UI',sans-serif" font-size="13" fill="#888">
     ⭐ MIT License
   </text>
-  <text x="950" y="703" font-family="'Segoe UI',sans-serif" font-size="13" fill="#666">
+  <text x="934" y="700" font-family="'Segoe UI',sans-serif" font-size="12" fill="#666">
     github.com/CochraneK/mao-skill
   </text>
 
   <!-- 角落印章装饰 -->
-  <rect x="1160" y="600" width="65" height="65" rx="4" fill="none" stroke="#e94560" stroke-width="1.5" opacity="0.25" transform="rotate(8 1192 632)"/>
-  <text x="1192" y="640" text-anchor="middle" font-family="'KaiTi','STKaiti',serif" font-size="20" fill="#e94560" opacity="0.3" transform="rotate(8 1192 632)">毛</text>
-
-  <!-- 左上角标签 -->
-  <rect x="30" y="20" width="145" height="24" rx="12" fill="#e94560" opacity="0.12" stroke="#e94560" stroke-width="0.5"/>
-  <text x="102" y="37" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#e94560" opacity="0.7">AI Skill Framework</text>
+  <rect x="1160" y="586" width="65" height="65" rx="4" fill="none" stroke="#e94560" stroke-width="1.5" opacity="0.25" transform="rotate(8 1192 618)"/>
+  <text x="1192" y="626" text-anchor="middle" font-family="'KaiTi','STKaiti',serif" font-size="20" fill="#e94560" opacity="0.3" transform="rotate(8 1192 618)">毛</text>
 
 </svg>
