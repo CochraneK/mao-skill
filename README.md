@@ -20,57 +20,59 @@
 
 ```mermaid
 graph TB
-    subgraph INPUT["📥 输入层：触发与路由"]
-        A["用户输入"] --> B["触发词检测<br/>毛泽东视角 / 主席怎么看<br/>矛盾分析 / 毛选思维"]
-        B --> C{"意图识别"}
-        C -->|任务指令 / 分析需求| D["📊 分析模式"]
-        C -->|闲聊 / 角色称呼 / "想跟主席聊聊"| E["💬 对话模式"]
-        C -->|VTuber UI 切换| F["🎭 VTuber 模式"]
+    subgraph INPUT["输入层"]
+        A[用户输入] --> B[触发词检测]
+        B --> C{意图识别}
+        C -->|任务指令/分析需求| D["📊 分析模式"]
+        C -->|闲聊/角色称呼| E["💬 对话模式"]
+        C -->|VTuber切换| F["🎭 VTuber"]
     end
 
-    subgraph CORE["🧠 核心认知引擎"]
-        subgraph MODELS["⚙️ 5大心智模型"]
-            M1["实践第一论<br/>《实践论》1937"]
-            M2["矛盾分析法<br/>《矛盾论》1937"]
-            M3["人民主体论<br/>兵民胜利之本"]
-            M4["以弱胜强论<br/>纸老虎战略"]
-            M5["自觉辩证法<br/>好坏互相转化"]
+    subgraph CORE["核心认知引擎"]
+        subgraph MODELS["5大心智模型"]
+            M1[实践第一论]
+            M2[矛盾分析法]
+            M3[人民主体论]
+            M4[以弱胜强论]
+            M5[自觉辩证法]
         end
-        subgraph HEURS["⚡ 10条决策启发式"]
-            H1["没调查不做决策"]
-            H2["抓主要矛盾"]
-            H3["打得赢就打<br/>打不赢就走"]
-            H4["先铺垫后发力"]
-            H5["战略藐视<br/>战术重视"]
-            H6["新概念定义问题"]
-            H7["时间换空间"]
-            H8["用人所长"]
-            H9["承担后果"]
-            H10["敢于冒险"]
+        subgraph HEURS["10条决策启发式"]
+            H1[没调查不做决策]
+            H2[抓主要矛盾]
+            H3[打得赢就打 打不赢就走]
+            H4[先铺垫后发力]
+            H5[战略藐视 战术重视]
+            H6[新概念定义问题]
+            H7[时间换空间]
+            H8[用人所长]
+            H9[承担后果]
+            H10[敢于冒险]
         end
-        subgraph DNA["🧬 表达风格DNA"]
-            D1["比喻降维打击"]
-            D2["短句+断言语气"]
-            D3["三段排比收尾"]
-            D4["爱憎分明"]
-            D5["古典底色<br/>白话外壳"]
+        subgraph DNA["表达风格DNA"]
+            D1[比喻降维打击]
+            D2[短句断言语气]
+            D3[三段排比收尾]
+            D4[爱憎分明]
+            D5[古典底色白话外壳]
         end
-        subgraph VALUES["🛡️ 安全护栏"]
-            V1["6大核心价值观"]
-            V2["5大诚实边界<br/>内在矛盾呈现"]
-            V3["AI避坑指南8条"]
-            V4["红线转舵话术4条"]
+        subgraph VALUES["安全护栏"]
+            V1[6大核心价值观]
+            V2[5大诚实边界]
+            V3[AI避坑指南8条]
+            V4[红线转舵话术4条]
         end
     end
 
-    subgraph OUTPUT["📤 三种输出模式"]
+    subgraph OUTPUT["输出层"]
         direction LR
-        OUT1["📊 分析模式<br/>─────────<br/>第三人称客观分析<br/>结构化报告格式<br/>矛盾诊断→建议→排比收尾<br/><br/>适用: 战略决策/商战/写作"]
-        OUT2["💬 对话模式<br/>─────────<br/>第一人称'我'<br/>自然口语流 + 幽默自嘲<br/>括号动作()增强现场感<br/><br/>适用: 闲聊/历史/困惑/访谈"]
-        OUT3["🎭 VTuber 模式<br/>─────────<br/>Live2D mao_pro 模型<br/>↓<br/>TTS: CosyVoice2 benjamin低沉男声<br/>+湖南湘潭老年口音<br/>↓<br/>括号动作预过滤 半角+全角<br/><br/>沉浸式语音交互"]
+        OUT1["📊 分析模式<br/>第三人称客观分析<br/>结构化报告<br/>矛盾诊断到建议<br/>排比收尾升华"]
+        OUT2["💬 对话模式<br/>第一人称我<br/>自然口语流<br/>幽默自嘲反问<br/>括号动作描写"]
+        OUT3["🎭 VTuber模式<br/>Live2D mao_pro模型<br/>TTS语音合成<br/>湖南湘潭口音<br/>括号动作预过滤"]
     end
 
-    D & E & F --> CORE
+    D --> CORE
+    E --> CORE
+    F --> CORE
     CORE --> OUTPUT
 
     style INPUT fill:#1a1a2e,stroke:#e94560,color:#fff,stroke-width:2px
@@ -110,26 +112,26 @@ graph TB
 flowchart TB
     subgraph P1["Phase 1: 六维并行信息采集"]
         direction LR
-        D1["📚 著作<br/>毛选四卷/矛盾论/实践论<br/>~554行"]
-        D2["💬 对话<br/>斯诺/斯特朗/蒙哥马利<br/>~511行"]
-        D3["🧬 表达DNA<br/>语言风格/修辞/幽默<br/>~477行"]
-        D4["👁️ 他者视角<br/>史学界评价/中外研究<br/>~307行"]
-        D5["⚡ 决策记录<br/>遵义/抗战/重庆谈判<br/>~245行"]
-        D6["📅 时间线<br/>28岁→83岁里程碑<br/>~207行"]
+        D1["📚 著作 ~554行"]
+        D2["💬 对话 ~511行"]
+        D3["🧬 表达DNA ~477行"]
+        D4["👁️ 他者视角 ~307行"]
+        D5["⚡ 决策记录 ~245行"]
+        D6["📅 时间线 ~207行"]
     end
 
-    P2["Phase 2: 交叉验证 & 提炼<br/>━━━━━━━━━━━━━━━━━<br/>去重归一 · 矛盾事实核查 · 来源追溯 · 可信度加权"]
+    P2["Phase 2: 交叉验证与提炼<br/>去重归一 / 矛盾核查 / 来源追溯"]
 
-    P3["Phase 3: SKILL 构建<br/>━━━━━━━━━━━━━━━━━<br/>5模型 + 10启发式(含边界) + 5表达指纹<br/>+ 6速查卡 + 3分析范例 + 4对话范例"]
+    P3["Phase 3: SKILL 构建<br/>5模型 + 10启发式 + 5表达指纹<br/>+ 6速查卡 + 7范例"]
 
     subgraph P4["Phase 4: 四维质量验证"]
-        Q1["4.1 结构完整性 ✅"]
-        Q2["4.2 内容一致性 <b>93%</b> ✅"]
-        Q3["4.3 加载测试 ✅"]
-        Q4["4.4 边界诚实性 8/8 ✅"]
+        Q1["结构完整性 OK"]
+        Q2["内容一致性 93% OK"]
+        Q3["加载测试 OK"]
+        Q4["边界诚实性 8/8 OK"]
     end
 
-    P5["<b>Phase 5: 迭代升级</b><br/>━━━━━━━━━━━━━━━━━<br/>v1.0(375行) → v1.1(445) → v1.2(799)<br/>→ v1.3(920) → <b>v1.4(1008)</b> 🎯"]
+    P5["Phase 5: 迭代升级<br/>v1.0(375) -> v1.1(445) -> v1.2(799)<br/>-> v1.3(920) -> v1.4(1008)"]
 
     D1 & D2 & D3 & D4 & D5 & D6 --> P2 --> P3 --> P4 --> P5
 
@@ -238,25 +240,25 @@ mindmap
 ```mermaid
 flowchart LR
     subgraph FRONT["输入与推理"]
-        U["用户输入<br/>文字/语音"] --> LLM["LLM 推理<br/>DeepSeek"]
-        LLM --> PP["persona_prompt<br/>来自 Skill 对话模式"]
-        PP --> TXT["毛泽东风格回复文本<br/>含括号动作描述"]
+        U["用户输入 文字/语音"] --> LLM["LLM 推理 DeepSeek"]
+        LLM --> PP["persona_prompt 来自Skill对话模式"]
+        PP --> TXT["毛泽东风格回复文本 含括号动作描述"]
     end
 
-    subgraph TTS_PIPE["TTS 预处理管道"]
+    subgraph TTS_PIPE["TTS预处理管道"]
         TXT --> PRE["tts_preprocessor"]
-        PRE --> F1["filter_parentheses()<br/>半角括号过滤"]
-        PRE --> F2["filter_parentheses()<br/>全角括号过滤"]
-        F1 & F2 --> CLEAN["纯文本<br/>不含动作描述"]
+        PRE --> F1["filter_parentheses 半角括号过滤"]
+        PRE --> F2["filter_parentheses 全角括号过滤"]
+        F1 & F2 --> CLEAN["纯文本 不含动作描述"]
     end
 
     subgraph SPEECH["语音合成"]
-        CLEAN --> CV["硅基流动 CosyVoice2<br/>模型: FunAudioLLM/CosyVoice2-0.5B<br/>音色: benjamin 低沉男声<br/>voice_description:<br/>沙哑低沉老年男性<br/>+湖南湘潭口音+豪迈沧桑感"]
+        CLEAN --> CV["CosyVoice2 语音合成<br/>benjamin低沉男声<br/>+湖南湘潭口音"]
     end
 
     subgraph RENDER["渲染输出"]
         CV --> AUDIO["音频流"]
-        AUDIO --> L2D["Live2D mao_pro<br/>口型同步 + 动作/表情/呼吸"]
+        AUDIO --> L2D["Live2D mao_pro 口型同步"]
     end
 
     style FRONT fill:#16213e,stroke:#e94560,color:#fff
