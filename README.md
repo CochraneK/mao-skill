@@ -1,52 +1,74 @@
-# 🧠 mao-skill — 毛泽东思维视角 Skill
+# 🧠 mao-skill — 毛泽东思维视角 AI Skill
 
 <p align="center">
-  <img src="assets/hero-banner.svg" alt="mao-skill v1.4 架构总览" width="100%"/>
+  <img src="assets/hero-banner.svg" alt="mao-skill v1.4 头图" width="100%"/>
 </p>
 
-> **用毛泽东的认知框架、决策逻辑和表达方式来分析问题、做出判断、给出建议。**
+<p align="center">
+  <strong>用毛泽东的认知框架、决策逻辑和表达方式来分析问题、做出判断、给出建议。</strong>
+</p>
 
-![Version](https://img.shields.io/badge/version-1.4.0-blue)
-![Quality](https://img.shields.io/badge/quality-★★★★☆_4.8%2F5-green)
-![License](https://img.shields.io/badge/license-MIT-green)
-![SKILL Lines](https://img.shields.io/badge/SKILL-1008行-blue)
-![Modes](https://img.shields.io/badge/modes-📊_分析_💬_对话_🎭VTuber-purple)
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.4.1-blue" alt="Version"/>
+  <img src="https://img.shields.io/badge/quality-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86_4.8%2F5-green" alt="Quality"/>
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License"/>
+  <img src="https://img.shields.io/badge/SKILL-1008%E8%A1%8C-blue" alt="Lines"/>
+  <img src="https://img.shields.io/badge/modes-%F0%9F%93%8A%E5%88%86%E6%9E%90_%F0%9F%92%AC%E5%AF%B9%E8%AF%9D_%F0%9F%8E%ADVTuber-purple" alt="Modes"/>
+</p>
 
-**GitHub**: [CochraneK/mao-skill](https://github.com/CochraneK/mao-skill) | **蒸馏日期**: 2026年4月17日
+<p align="center">
+  <strong>GitHub</strong>: <a href="https://github.com/CochraneK/mao-skill">CochraneK/mao-skill</a> ·
+  <strong>蒸馏日期</strong>: 2026年4月17日
+</p>
 
 ---
 
 ## 🏗️ 架构全景图
 
 <p align="center">
-  <img src="assets/architecture-diagram.svg" alt="mao-skill 架构全景图：输入层 → 核心引擎(5模型+10启发式+表达DNA+安全护栏) → 三种输出模式" width="100%"/>
+  <img src="assets/architecture-diagram.svg" alt="架构全景图：输入层 → 核心引擎(5模型+10启发式+表达DNA+安全护栏) → 三种输出模式" width="100%"/>
 </p>
 
 ---
 
 ## ✨ 这是什么？
 
-这是一个基于**女娲造人蒸馏法（Huashu Nuwa）**构建的 AI 思维视角 Skill。它不是简单的"人设扮演"，而是从 6 个维度系统采集、提炼、验证后形成的**可加载认知框架**：
+**mao-skill** 是一个基于毛泽东思想体系提炼而成的 **AI 思维视角 Skill**。它不是简单的人设扮演或角色模仿，而是一个经过系统性蒸馏和验证的**可加载认知框架**——让 AI 能够用毛泽东的思维模式分析问题、用他的决策逻辑做出判断、用他的表达风格输出内容。
+
+### 核心组成
 
 | 类别 | 内容 | 数量 |
 |------|------|------|
 | 🧠 心智模型 | 实践论、矛盾分析法、人民主体论、以弱胜强论、自觉辩证法 | **5** |
-| ⚡ 决策启发式 | 从"没调查不做决策"到"敢于冒险博取战略利益"，每条带边界条件 | **10** |
+| ⚡ 决策启发式 | 从「没调查不做决策」到「敢于冒险博取战略利益」，每条带边界条件 | **10** |
 | 🧬 表达风格指纹 | 比喻降维、短句断言、三段排比、爱憎分明、古典底色 | **5** |
-| 💬 口语化转化案例 | 从"讨老婆不要钱"到"天要下雨娘要嫁人" | **16** |
+| 💬 口语化转化案例 | 从「讨老婆不要钱」到「天要下雨娘要嫁人」 | **16** |
 | 🐛 AI 避坑指南 | 过度攻击/滥用排比/丢失辩证性等常见错误模式 | **8** |
 | 🛡️ 核心价值观+诚实边界 | 包含 5 大内在矛盾与使用注意事项 | **6+5** |
 | ⚡ 速查卡片 | 面对强对手/复杂局面/说服/犯错/写作/被批评 | **6** |
 | 📖 完整范例 | 商业竞争 / 个人决策 / 团队管理（端到端输出样本） | **3分析+4对话** |
 | 🎭 VTuber 集成 | Live2D 虚拟形象 + CosyVoice2 语音（benjamin低沉男声） | **✅** |
 
+> **一句话概括**：1008 行 SKILL.md = 从毛选、对话、史学研究、决策记录等 2300 行一手资料中蒸馏出的可执行思维框架。
+
 ---
 
-## 🔬 构建流水线：女娲造人 6 维并行蒸馏
+## 🔬 构建方法：6 维并行蒸馏
 
 <p align="center">
-  <img src="assets/pipeline-diagram.svg" alt="女娲造人 6 维蒸馏流水线" width="100%"/>
+  <img src="assets/pipeline-diagram.svg" alt="6 维并行蒸馏流水线" width="100%"/>
 </p>
+
+本 Skill 采用 **6 维并行信息采集 + 交叉验证 + 迭代精炼** 的方法论构建：
+
+1. **著作维度** (~554行)：毛选四卷、《矛盾论》、《实践论》等核心文本
+2. **对话维度** (~511行)：斯诺、斯特朗、蒙哥马利等关键访谈记录
+3. **表达 DNA 维度** (~477行)：修辞技巧、语言节奏、幽默模式
+4. **他者视角** (~307行)：中外学者评价与历史定位研究
+5. **决策记录** (~245行)：遵义会议、抗战战略、重庆谈判等关键节点复盘
+6. **时间线** (~207行)：28岁→83岁的人生轨迹与里程碑
+
+经过交叉验证去重 → 结构化提炼 → 四维质量验证 → 五轮迭代升级至 v1.4。
 
 ### 质量迭代历程
 
@@ -220,7 +242,7 @@ mindmap
 | 01-writings.md | 核心著作提炼（《毛选》、哲学著作、诗词） | ~554行 |
 | 02-conversations.md | 关键对话与言论（斯诺/斯特朗/蒙哥马利等） | ~511行 |
 | 03-expression-dna.md | 表达风格深度拆解（修辞/节奏/幽默/口语化） | ~477行 |
-| 04-external-views.md | 他者视角（中外学者评价/历史定位） | ~307行 |
+| 04-external views.md | 他者视角（中外学者评价/历史定位） | ~307行 |
 | 05-decisions.md | 关键决策复盘（成功+失败的决策及原因） | ~245行 |
 | 06-timeline.md | 83年人生时间线（关键事件/年龄/意义标注） | ~207行 |
 
@@ -263,7 +285,8 @@ mindmap
 
 | 版本 | 日期 | 变更摘要 |
 |------|------|----------|
-| **v1.4.0** | 2026-04-17 | 审查改进："与人斗"考证修正为审慎并存表述；启发式4补边界条件；新增场景F（面对批评）速查卡；红线转舵话术4条；VTuber集成说明；README 重写为 SVG 精美可视化架构图 |
+| **v1.4.1** | 2026-04-17 | SVG 图全面重绘：修复文字溢出/模块重叠/风格统一；README 以 mao-skill 为主角重构 |
+| **v1.4.0** | 2026-04-17 | 审查改进："与人斗"考证修正为审慎并存表述；启发式4补边界条件；新增场景F（面对批评）速查卡；红线转舵话术4条；VTuber集成说明；SVG 精美可视化架构图 |
 | v1.3.0 | 2026-04-17 | 新增双模式系统：💬对话模式（第一人称角色扮演）；4个完整对话范例（闲聊/人生困惑/AI讨论/后悔）；9条对话使用要点 |
 | v1.2.0 | 2026-04-17 | 新增3个完整分析范例（商战/职业/管理）；范例对照表；范例使用说明；质量升至4.8 |
 | v1.1.0 | 2026-04-17 | +16条口语转化案例；10条启发式边界条件；8项AI避坑指南；引文出处标注 |
@@ -273,10 +296,13 @@ mindmap
 
 ## 🙏 致谢
 
-- **蒸馏框架**：[女娲造人 (huashu-nuwa)](https://github.com/huashu-nuwa) — 6 维并行人物蒸馏方法论
-- **一手来源**：《毛泽东选集》四卷、《毛泽东文集》、《毛泽东年谱》
-- **二手研究**：罗斯·特里尔《毛泽东传》、菲利普·肖特《毛泽东传》、史景恭《最后的革命》等
-- **VTuber 集成**：[Open-LLM-VTuber](https://github.com/Open-LLM-VTuber) 框架 + 硅基流动 CosyVoice2 TTS
+**mao-skill** 的诞生离不开以下项目和资源的支持：
+
+- **🏗️ 蒸馏框架**: [huashu-nuwa (女娲造人)](https://github.com/huashu-nuwa) — 本 Skill 的构建方法论基础，提供了 6 维并行人物蒸馏的系统化流程，使从海量原始资料到高质量认知框架的提炼成为可能。
+- **🤖 VTuber 框架**: [Open-LLM-VTuber](https://github.com/Open-LLM-VTuber) — 提供了完整的 Live2D 虚拟形象交互平台，mao-skill 的 VTuber 模式基于此框架实现。
+- **🔊 TTS 引擎**: [硅基流动 CosyVoice2](https://siliconflow.cn) — 提供高质量的中文语音合成能力（benjamin 音色），赋予 mao-skill 低沉男声 + 湖南湘潭口音。
+- **📚 一手资料来源**: 《毛泽东选集》四卷、《毛泽东文集》、《毛泽东年谱》、以及罗斯·特里尔《毛泽东传》、菲利普·肖特《毛泽东传》等二手研究。
+- **💼 平台支持**: [WorkBuddy](https://www.codebuddy.cn) — 提供了 Skill 加载系统和 AI Agent 运行环境。
 
 ---
 

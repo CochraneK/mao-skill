@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 680" width="1280" height="680">
+
   <defs>
-    <linearGradient id="bgP" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d0d1a"/>
-      <stop offset="100%" style="stop-color:#12122a"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d1a"/>
+      <stop offset="100%" stop-color="#101025"/>
     </linearGradient>
     <filter id="gR"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#e94560" flood-opacity="0.4"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="gC"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#00d9ff" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -14,150 +15,159 @@
     <marker id="ag" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
       <polygon points="0 0, 12 4, 0 8" fill="#ffc107" opacity="0.7"/>
     </marker>
+    <marker id="ar" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#e94560" opacity="0.7"/>
+    </marker>
   </defs>
 
   <!-- 背景 -->
-  <rect width="1280" height="620" fill="url(#bgP)" rx="12"/>
+  <rect width="1280" height="680" fill="url(#bg)" rx="12"/>
 
   <!-- 标题 -->
-  <text x="640" y="42" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#ffc107">🔬 构建流水线 — 女娲造人 6 维并行蒸馏</text>
-  <line x1="360" y1="58" x2="920" y2="58" stroke="#333" stroke-width="1"/>
+  <text x="640" y="38" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#ffc107">🔬 构建流水线 — 女娲造人 6 维并行蒸馏</text>
+  <line x1="360" y1="52" x2="920" y2="52" stroke="#333" stroke-width="1"/>
 
   <!-- ========== Phase 1: 六维采集 ========== -->
-  <rect x="30" y="80" width="1220" height="150" rx="10" fill="#160c18" stroke="#e94560" stroke-width="1.3" opacity="0.8"/>
-  
-  <!-- P1 标签 -->
-  <rect x="45" y="70" width="200" height="22" rx="4" fill="#e94560"/>
-  <text x="145" y="85" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#fff" font-weight="bold">Phase 1: 六维并行信息采集</text>
+  <rect x="30" y="75" width="1220" height="155" rx="10" fill="#160c18" stroke="#e94560" stroke-width="1.3" filter="url(#gR)" opacity="0.8"/>
 
-  <!-- 六个维度卡片 -->
+  <rect x="45" y="65" width="200" height="22" rx="4" fill="#e94560"/>
+  <text x="145" y="80" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#fff" font-weight="bold">Phase 1: 六维并行信息采集</text>
+
   <!-- D1: 著作 -->
-  <g transform="translate(50,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">📚</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">著作</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">毛选四卷 / 矛盾论</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">实践论 / 诗词全集</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~554行</text>
+  <g transform="translate(50,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">📚</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">著作</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">毛选四卷 / 矛盾论 / 实践论</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">哲学著作 / 诗词</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~554 行</text>
   </g>
 
   <!-- D2: 对话 -->
-  <g transform="translate(250,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">💬</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">对话记录</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">斯诺 / 斯特朗</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">蒙哥马利 / 内部讲话</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~511行</text>
+  <g transform="translate(250,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">💬</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">对话</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">斯诺 / 斯特朗 / 蒙哥马利</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">关键言论与采访记录</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~511 行</text>
   </g>
 
   <!-- D3: 表达DNA -->
-  <g transform="translate(450,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">🧬</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">表达 DNA</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">语言风格 / 修辞手法</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">节奏韵律 / 幽默机制</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~477行</text>
+  <g transform="translate(450,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">🧬</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">表达 DNA</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">语言风格 / 修辞技巧</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">幽默模式 / 口语化特征</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~477 行</text>
   </g>
 
   <!-- D4: 他者视角 -->
-  <g transform="translate(650,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">👁️</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">他者视角</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">史学界评价</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">中外研究者观点</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~307行</text>
+  <g transform="translate(650,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">👁️</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">他者视角</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">史学界评价 / 中外研究</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">历史定位与争议分析</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~307 行</text>
   </g>
 
   <!-- D5: 决策记录 -->
-  <g transform="translate(850,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">⚡</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">决策记录</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">遵义会议 / 抗战战略</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">重庆谈判 / 大跃进反思</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~245行</text>
+  <g transform="translate(850,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">⚡</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">决策记录</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">遵义会议 / 抗战战略</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">重庆谈判等关键节点</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~245 行</text>
   </g>
 
   <!-- D6: 时间线 -->
-  <g transform="translate(1050,105)">
-    <rect width="180" height="110" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="1" filter="url(#gR)" opacity="0.85"/>
-    <text x="90" y="26" text-anchor="middle" font-size="24">📅</text>
-    <text x="90" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">时间线</text>
-    <line x1="25" y1="58" x2="155" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <text x="90" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">28岁 → 83岁里程碑</text>
-    <text x="90" y="92" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#aaa">一大/井冈山/遵义/建国</text>
-    <rect x="60" y="98" width="60" height="16" rx="8" fill="#e94560" opacity="0.2"/>
-    <text x="90" y="110" text-anchor="middle" font-family="'Segoe UI'" font-size="9" fill="#e94560">~207行</text>
+  <g transform="translate(1050,95)">
+    <rect width="185" height="120" rx="8" fill="#1a0a14" stroke="#e94560" stroke-width="0.8" opacity="0.85"/>
+    <text x="92" y="26" text-anchor="middle" font-size="24">📅</text>
+    <text x="92" y="48" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#e94560" font-weight="bold">时间线</text>
+    <line x1="20" y1="58" x2="165" y2="58" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <text x="92" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">28岁 → 83岁人生轨迹</text>
+    <text x="92" y="91" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#bbb">关键事件 / 年龄标注</text>
+    <rect x="40" y="102" width="105" height="16" rx="8" fill="#e94560" opacity="0.12"/>
+    <text x="92" y="114" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#e97480">~207 行</text>
   </g>
 
   <!-- 箭头: P1 → P2 -->
-  <line x1="640" y1="230" x2="640" y2="260" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
+  <path d="M640,235 L640,260" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
 
   <!-- ========== Phase 2: 交叉验证 ========== -->
-  <rect x="340" y="270" width="600" height="65" rx="10" fill="#0a1628" stroke="#00d9ff" stroke-width="1.3" filter="url(#gC)" opacity="0.85"/>
-  <circle cx="370" cy="303" r="14" fill="#00d9ff" opacity="0.15"/>
-  <text x="370" y="308" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#00d9ff" font-weight="bold">2</text>
-  <text x="640" y="298" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#00d9ff" font-weight="bold">Phase 2: 交叉验证 &amp; 提炼</text>
-  <text x="640" y="320" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#88bbdd">去重归一 · 矛盾事实核查 · 来源追溯标注 · 可信度加权</text>
+  <rect x="250" y="265" width="780" height="62" rx="10" fill="#141020" stroke="#00d9ff" stroke-width="1.3" filter="url(#gC)" opacity="0.8"/>
+
+  <circle cx="278" cy="296" r="15" fill="#00d9ff" opacity="0.15"/>
+  <text x="278" y="301" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#00d9ff" font-weight="bold">2</text>
+  <text x="640" y="290" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#00d9ff" font-weight="bold">Phase 2: 交叉验证 &amp; 提炼</text>
+  <text x="640" y="312" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#888">去重归一 · 矛盾事实核查 · 来源追溯 · 可信度加权</text>
 
   <!-- 箭头: P2 → P3 -->
-  <line x1="640" y1="335" x2="640" y2="365" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
+  <path d="M640,332 L640,360" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
 
-  <!-- ========== Phase 3: SKILL构建 ========== -->
-  <rect x="280" y="375" width="720" height="65" rx="10" fill="#1a1508" stroke="#ffc107" stroke-width="1.3" filter="url(#gG)" opacity="0.85"/>
-  <circle cx="310" cy="408" r="14" fill="#ffc107" opacity="0.15"/>
-  <text x="310" y="413" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#ffc107" font-weight="bold">3</text>
-  <text x="640" y="403" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#ffc107" font-weight="bold">Phase 3: SKILL 构建</text>
-  <text x="640" y="425" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ccaa66">5模型 + 10启发式(含边界条件) + 5表达指纹 + 6速查卡 + 3分析范例 + 4对话范例</text>
+  <!-- ========== Phase 3: SKILL 构建 ========== -->
+  <rect x="180" y="365" width="920" height="68" rx="10" fill="#161410" stroke="#ffc107" stroke-width="1.3" filter="url(#gG)" opacity="0.8"/>
+
+  <circle cx="208" cy="399" r="15" fill="#ffc107" opacity="0.15"/>
+  <text x="208" y="404" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#ffc107" font-weight="bold">3</text>
+  <text x="640" y="393" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#ffc107" font-weight="bold">Phase 3: SKILL 构建</text>
+  <text x="640" y="418" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ccaa66">5模型 + 10启发式(含边界) + 5表达指纹 + 6速查卡 + 3分析范例 + 4对话范例</text>
 
   <!-- 箭头: P3 → P4 -->
-  <line x1="640" y1="440" x2="640" y2="470" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
+  <path d="M640,438 L640,468" stroke="#555" stroke-width="2" marker-end="url(#aw)"/>
 
   <!-- ========== Phase 4: 四维验证 ========== -->
-  <rect x="240" y="480" width="800" height="60" rx="10" fill="#0a1a0a" stroke="#4caf50" stroke-width="1.3" filter="url(#gGr)" opacity="0.85"/>
-  <circle cx="270" cy="510" r="14" fill="#4caf50" opacity="0.15"/>
-  <text x="270" y="515" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#4caf50" font-weight="bold">4</text>
-  <text x="640" y="505" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#4caf50" font-weight="bold">Phase 4: 四维质量验证</text>
-  
-  <!-- 4个验证指标小标签 -->
-  <g transform="translate(400,517)">
-    <rect x="0" y="0" width="95" height="18" rx="9" fill="#4caf50" opacity="0.15"/>
-    <text x="47" y="13" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">结构完整性 ✅</text>
-    
-    <rect x="105" y="0" width="120" height="18" rx="9" fill="#4caf50" opacity="0.15"/>
-    <text x="165" y="13" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">内容一致性 93% ✅</text>
-    
-    <rect x="235" y="0" width="85" height="18" rx="9" fill="#4caf50" opacity="0.15"/>
-    <text x="277" y="13" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">加载测试 ✅</text>
-    
-    <rect x="330" y="0" width="115" height="18" rx="9" fill="#4caf50" opacity="0.15"/>
-    <text x="387" y="13" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">边界诚实性 8/8 ✅</text>
+  <rect x="240" y="475" width="800" height="64" rx="10" fill="#0c1a0c" stroke="#4caf50" stroke-width="1.3" filter="url(#gGr)" opacity="0.85"/>
+
+  <circle cx="270" cy="507" r="14" fill="#4caf50" opacity="0.15"/>
+  <text x="270" y="512" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="12" fill="#4caf50" font-weight="bold">4</text>
+  <text x="640" y="500" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#4caf50" font-weight="bold">Phase 4: 四维质量验证</text>
+
+  <!-- 4个验证标签 -->
+  <g transform="translate(400,512)">
+    <rect width="96" height="20" rx="10" fill="#4caf50" opacity="0.15"/>
+    <text x="48" y="14" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">结构完整性 ✅</text>
+
+    <rect x="106" y="0" width="122" height="20" rx="10" fill="#4caf50" opacity="0.15"/>
+    <text x="167" y="14" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">内容一致性 93%✅</text>
+
+    <rect x="238" y="0" width="86" height="20" rx="10" fill="#4caf50" opacity="0.15"/>
+    <text x="281" y="14" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">加载测试 ✅</text>
+
+    <rect x="334" y="0" width="118" height="20" rx="10" fill="#4caf50" opacity="0.15"/>
+    <text x="393" y="14" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">边界诚实性 8/8✅</text>
   </g>
 
   <!-- 箭头: P4 → P5 -->
-  <line x1="640" y1="540" x2="640" y2="565" stroke="#ffc107" stroke-width="2.5" marker-end="url(#ag)"/>
+  <path d="M640,544 L640,572" stroke="#ffc107" stroke-width="2.5" marker-end="url(#ag)"/>
 
-  <!-- ========== Phase 5: 迭代升级 (最醒目) ========== -->
-  <rect x="300" y="572" width="680" height="38" rx="19" fill="#e94560" opacity="0.12" stroke="#e94560" stroke-width="1.5"/>
-  <text x="640" y="597" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="14" fill="#e94560" font-weight="bold">
-    Phase 5: 迭代升级 · v1.0(375行) → v1.1(445) → v1.2(799) → v1.3(920) → 
+  <!-- ========== Phase 5: 迭代升级 ========== -->
+  <rect x="150" y="578" width="980" height="48" rx="10" fill="#e94560" opacity="0.1" stroke="#e94560" stroke-width="1.2"/>
+
+  <!-- 分两行显示版本迭代，避免截断 -->
+  <text x="640" y="600" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="13" fill="#ccc">
+    v1.0 (375行)  →  v1.1 (445)  →  v1.2 (799)  →  v1.3 (920)
   </text>
-  <text x="1040" y="597" font-family="'Microsoft YaHei'" font-size="16" fill="#ffc107" font-weight="bold">v1.4(1008)</text>
-  <text x="1120" y="597" font-size="18">🎯</text>
+  <text x="640" y="618" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="15" fill="#ffc107" font-weight="bold">
+    →  v1.4 (1008行)  🎯
+  </text>
 
-  <!-- 底部信息 -->
-  <text x="640" y="615" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#333">总采集量 ~2300行 → 蒸馏为 SKILL.md 1008行（压缩率 56%）· 女娲造人蒸馏法 Huashu Nuwa</text>
+  <!-- 底部统计栏 -->
+  <rect x="30" y="642" width="1220" height="28" rx="6" fill="#111118" stroke="#222" stroke-width="0.5" opacity="0.6"/>
+  <text x="640" y="661" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#666">总采集量 ~2300行 → 蒸馏为 SKILL.md 1008行（压缩率 56%）· 女娲造人蒸馏法 Huashu Nuwa Framework</text>
+
 </svg>
