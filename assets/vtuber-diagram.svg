@@ -1,168 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620">
-
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d0d1a"/>
-      <stop offset="100%" stop-color="#101025"/>
+    <linearGradient id="vtBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
-    <filter id="gR"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#e94560" flood-opacity="0.4"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="gC"><feGaussianBlur stdDeviation="4" result="b"/><feFlood flood-color="#00d9ff" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="gG"><feGaussianBlur stdDeviation="4" result="b"/><feFlood flood-color="#ffc107" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="gGr"><feGaussianBlur stdDeviation="4" result="b"/><feFlood flood-color="#4caf50" flood-opacity="0.35"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <marker id="agR" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0 0, 12 4, 0 8" fill="#e94560" opacity="0.65"/>
-    </marker>
-    <marker id="agC" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0 0, 12 4, 0 8" fill="#00d9ff" opacity="0.6"/>
-    </marker>
-    <marker id="agG" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0 0, 12 4, 0 8" fill="#ffc107" opacity="0.6"/>
-    </marker>
-    <marker id="agGr" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0 0, 12 4, 0 8" fill="#4caf50" opacity="0.6"/>
-    </marker>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CD5C5C"/>
+      <stop offset="100%" stop-color="#8B0000"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DAA520"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#DAA520"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
   </defs>
 
   <!-- 背景 -->
-  <rect width="1280" height="600" fill="url(#bg)" rx="12"/>
+  <rect width="1200" height="500" fill="url(#vtBg)"/>
 
-  <!-- 标题 -->
-  <text x="640" y="36" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#00d9ff">🎭 VTuber 集成架构 — Live2D + TTS 完整链路</text>
-  <line x1="380" y1="50" x2="900" y2="50" stroke="#333" stroke-width="1"/>
+  <!-- 标题区 -->
+  <rect x="0" y="0" width="1200" height="50" fill="#8B0000"/>
+  <text x="600" y="35" text-anchor="middle" font-family="'SimHei',serif" font-size="24" font-weight="bold" fill="#FFD700">VTuber 集成架构</text>
+  <line x1="0" y1="50" x2="1200" y2="50" stroke="#DAA520" stroke-width="2"/>
 
-  <!-- ========== Stage 1: 输入与推理 ========== -->
-  <rect x="30" y="72" width="285" height="200" rx="10" fill="#160c14" stroke="#e94560" stroke-width="1.3" filter="url(#gR)" opacity="0.85"/>
-
-  <rect x="48" y="62" width="115" height="20" rx="4" fill="#e94560"/>
-  <text x="105" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#fff" font-weight="bold">① 输入与推理</text>
-
-  <g transform="translate(42,92)">
-    <rect width="256" height="34" rx="17" fill="#e94560" opacity="0.1" stroke="#e94560" stroke-width="0.5"/>
-    <text x="128" y="22" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#e94560" font-weight="bold">用户输入</text>
-    <text x="128" y="36" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#888">文字 / 语音</text>
+  <!-- 左侧：用户输入 -->
+  <g transform="translate(80, 100)">
+    <rect x="0" y="0" width="180" height="80" rx="8" fill="#1a1a1a" stroke="#CD5C5C" stroke-width="2" filter="url(#shadow)"/>
+    <text x="90" y="35" text-anchor="middle" font-size="24">💬</text>
+    <text x="90" y="60" text-anchor="middle" font-family="'SimSun',serif" font-size="14" fill="#f5f5dc">用户语音/文字</text>
   </g>
 
-  <g transform="translate(42,138)">
-    <rect width="256" height="42" rx="6" fill="#1a0a12" stroke="#e94560" stroke-width="0.6"/>
-    <text x="128" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ffc107" font-weight="bold">🤖 LLM 推理 (DeepSeek)</text>
-    <line x1="15" y1="26" x2="241" y2="26" stroke="#333" stroke-width="0.3" opacity="0.3"/>
-    <text x="128" y="38" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#999">Persona Prompt 注入 → 毛泽东风格回复</text>
+  <!-- 箭头 -->
+  <g transform="translate(280, 125)">
+    <polygon points="20,0 40,15 20,30 0,15" fill="#DAA520"/>
   </g>
 
-  <g transform="translate(42,192)">
-    <rect width="256" height="32" rx="16" fill="#4caf50" opacity="0.1" stroke="#4caf50" stroke-width="0.5"/>
-    <text x="128" y="21" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">✓ 含括号动作的完整文本 →</text>
+  <!-- 大模型处理 -->
+  <g transform="translate(340, 80)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#1a1a1a" stroke="url(#goldGrad)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-size="28">🤖</text>
+    <text x="100" y="65" text-anchor="middle" font-family="'SimHei',serif" font-size="14" fill="#FFD700" font-weight="bold">LLM 大模型</text>
+    <text x="100" y="90" text-anchor="middle" font-size="11" fill="#888">Claude/GPT/国产模型</text>
   </g>
 
-  <!-- 箭头 S1→S2 -->
-  <path d="M320,172 L365,172" stroke="#e94560" stroke-width="1.8" marker-end="url(#agR)"/>
-
-  <!-- ========== Stage 2: TTS 预处理 ========== -->
-  <rect x="370" y="72" width="270" height="200" rx="10" fill="#10101c" stroke="#00d9ff" stroke-width="1.3" filter="url(#gC)" opacity="0.85"/>
-
-  <rect x="388" y="62" width="115" height="20" rx="4" fill="#00d9ff"/>
-  <text x="445" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#000" font-weight="bold">② TTS 预处理</text>
-
-  <g transform="translate(382,94)">
-    <rect width="245" height="40" rx="6" fill="#00d9ff" opacity="0.08" stroke="#00d9ff" stroke-width="0.5"/>
-    <text x="122" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#00d9ff" font-weight="bold">tts_preprocessor</text>
-    <text x="122" y="33" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#888">括号动作预过滤模块 (框架修改)</text>
+  <!-- 箭头 -->
+  <g transform="translate(560, 125)">
+    <polygon points="20,0 40,15 20,30 0,15" fill="#DAA520"/>
   </g>
 
-  <g transform="translate(382,146)">
-    <rect width="116" height="38" rx="6" fill="#0c1518" stroke="#00d9ff" stroke-width="0.5"/>
-    <text x="58" y="16" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#00d9ff">filter_parentheses()</text>
-    <text x="58" y="31" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#777">半角 () 过滤</text>
+  <!-- SKILL -->
+  <g transform="translate(620, 80)">
+    <rect x="0" y="0" width="180" height="120" rx="8" fill="#1a1a1a" stroke="#CD5C5C" stroke-width="2" filter="url(#shadow)"/>
+    <text x="90" y="35" text-anchor="middle" font-size="28">📖</text>
+    <text x="90" y="65" text-anchor="middle" font-family="'SimHei',serif" font-size="14" fill="#CD5C5C" font-weight="bold">mao-skill</text>
+    <text x="90" y="85" text-anchor="middle" font-size="11" fill="#888">毛泽东思维框架</text>
+    <text x="90" y="105" text-anchor="middle" font-size="10" fill="#666">对话模式 persona</text>
   </g>
 
-  <g transform="translate(512,146)">
-    <rect width="115" height="38" rx="6" fill="#0c1518" stroke="#00d9ff" stroke-width="0.5"/>
-    <text x="57" y="16" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#00d9ff">filter_parentheses()</text>
-    <text x="57" y="31" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#777">全角（）过滤</text>
+  <!-- 箭头 -->
+  <g transform="translate(820, 125)">
+    <polygon points="20,0 40,15 20,30 0,15" fill="#DAA520"/>
   </g>
 
-  <g transform="translate(382,196)">
-    <rect width="245" height="28" rx="14" fill="#4caf50" opacity="0.1" stroke="#4caf50" stroke-width="0.5"/>
-    <text x="122" y="19" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#4caf50">✓ 纯文本（不含动作描述）</text>
+  <!-- 右侧：TTS -->
+  <g transform="translate(880, 80)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#1a1a1a" stroke="#00CED1" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-size="28">🔊</text>
+    <text x="100" y="65" text-anchor="middle" font-family="'SimHei',serif" font-size="14" fill="#00CED1" font-weight="bold">TTS 语音合成</text>
+    <text x="100" y="90" text-anchor="middle" font-size="11" fill="#888">CosyVoice2 / EdgeTTS</text>
+    <text x="100" y="105" text-anchor="middle" font-size="10" fill="#666">benjamin 音色</text>
   </g>
 
-  <!-- 箭头 S2→S3 -->
-  <path d="M647,172 L697,172" stroke="#00d9ff" stroke-width="1.8" marker-end="url(#agC)"/>
+  <!-- 底部：Live2D -->
+  <g transform="translate(400, 250)">
+    <rect x="0" y="0" width="400" height="180" rx="10" fill="#1a1a1a" stroke="url(#goldGrad)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="200" y="35" text-anchor="middle" font-size="32">🎭</text>
+    <text x="200" y="70" text-anchor="middle" font-family="'SimHei',serif" font-size="18" fill="#FFD700" font-weight="bold">Live2D 虚拟形象</text>
 
-  <!-- ========== Stage 3: 语音合成 ========== -->
-  <rect x="702" y="72" width="280" height="200" rx="10" fill="#141210" stroke="#ffc107" stroke-width="1.3" filter="url(#gG)" opacity="0.85"/>
-
-  <rect x="720" y="62" width="110" height="20" rx="4" fill="#ffc107"/>
-  <text x="775" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#000" font-weight="bold">③ 语音合成</text>
-
-  <g transform="translate(716,94)">
-    <rect width="252" height="44" rx="6" fill="#ffc107" opacity="0.08" stroke="#ffc107" stroke-width="0.5"/>
-    <text x="126" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#ffc107" font-weight="bold">🔊 CosyVoice2 语音引擎</text>
-    <text x="126" y="34" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#888">模型: FunAudioLLM/CosyVoice2-0.5B</text>
+    <!-- 角色信息 -->
+    <g transform="translate(30, 90)">
+      <text x="0" y="0" font-size="12" fill="#888">角色模型:</text>
+      <text x="80" y="0" font-size="12" fill="#f5f5dc">mao_pro</text>
+    </g>
+    <g transform="translate(30, 115)">
+      <text x="0" y="0" font-size="12" fill="#888">语音风格:</text>
+      <text x="80" y="0" font-size="12" fill="#DAA520">沙哑低沉/湖南口音</text>
+    </g>
+    <g transform="translate(30, 140)">
+      <text x="0" y="0" font-size="12" fill="#888">动作捕捉:</text>
+      <text x="80" y="0" font-size="12" fill="#00CED1">自动匹配对话情绪</text>
+    </g>
   </g>
 
-  <g transform="translate(716,150)">
-    <rect width="252" height="46" rx="6" fill="#161410" stroke="#ffc107" stroke-width="0.5"/>
-    <text x="126" y="17" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#ffc107" font-weight="bold">音色: benjamin 低沉男声</text>
-    <text x="126" y="33" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#999">+ 湖南湘潭口音 · 豪迈沧桑感</text>
+  <!-- 底部输出 -->
+  <g transform="translate(450, 460)">
+    <rect x="0" y="0" width="300" height="35" rx="6" fill="#8B0000"/>
+    <text x="150" y="24" text-anchor="middle" font-family="'SimSun',serif" font-size="12" fill="#f5f5dc">输出: 语音 + Live2D 动画</text>
   </g>
 
-  <g transform="translate(716,206)">
-    <rect width="120" height="26" rx="13" fill="#00d9ff" opacity="0.08" stroke="#00d9ff" stroke-width="0.4"/>
-    <text x="60" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#00d9ff">voice_description:</text>
-  </g>
-  <g transform="translate(850,206)">
-    <rect width="118" height="26" rx="13" fill="#00d9ff" opacity="0.08" stroke="#00d9ff" stroke-width="0.4"/>
-    <text x="59" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#00d9ff">沙哑低沉/豪迈感</text>
-  </g>
-
-  <!-- 箭头 S3→S4 -->
-  <path d="M987,172 L1005,172" stroke="#ffc107" stroke-width="1.8" marker-end="url(#agG)"/>
-
-  <!-- ========== Stage 4: 渲染输出 ========== -->
-  <rect x="1010" y="72" width="240" height="200" rx="10" fill="#0c1a0c" stroke="#4caf50" stroke-width="1.3" filter="url(#gGr)" opacity="0.85"/>
-
-  <rect x="1025" y="62" width="95" height="20" rx="4" fill="#4caf50"/>
-  <text x="1072" y="76" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#000" font-weight="bold">④ 渲染输出</text>
-
-  <g transform="translate(1020,96)">
-    <!-- Live2D 卡片 -->
-    <rect width="220" height="52" rx="6" fill="#061406" stroke="#4caf50" stroke-width="0.8"/>
-    <text x="18" y="30" font-size="20">🎭</text>
-    <text x="46" y="23" font-family="'Microsoft YaHei'" font-size="12" fill="#4caf50" font-weight="bold">Live2D mao_pro 模型</text>
-    <text x="46" y="41" font-family="'Microsoft YaHei'" font-size="9" fill="#559955">口型同步 + 动作/表情/呼吸</text>
-
-    <!-- 最终体验输出 -->
-    <rect y="62" width="220" height="34" rx="17" fill="#4caf50" opacity="0.12" stroke="#4caf50" stroke-width="0.8"/>
-    <text x="110" y="84" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="11" fill="#4caf50" font-weight="bold">✨ 沉浸式语音交互体验</text>
+  <!-- 项目信息 -->
+  <g transform="translate(50, 380)">
+    <text x="0" y="0" font-size="11" fill="#666">相关项目:</text>
+    <text x="0" y="20" font-size="11" fill="#888">• Open-LLM-VTuber</text>
+    <text x="0" y="40" font-size="11" fill="#888">• 硅基流动 CosyVoice2</text>
+    <text x="0" y="60" font-size="11" fill="#888">• Live2D Models</text>
   </g>
 
-  <!-- 音频流标注 -->
-  <g transform="translate(1020,198)">
-    <rect width="220" height="26" rx="13" fill="#e94560" opacity="0.08" stroke="#e94560" stroke-width="0.4"/>
-    <text x="110" y="18" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#e94560">音频→渲染 (PCM/WAV 流)</text>
-  </g>
-
-  <!-- ========== 底部配置速查 - 三栏等高对齐 ========== -->
-  <!-- 统一高度 48px, y=520 -->
-
-  <!-- 左栏：配置速查 -->
-  <rect x="30" y="520" width="395" height="48" rx="8" fill="#111118" stroke="#222" stroke-width="0.8" opacity="0.65"/>
-  <text x="45" y="540" font-family="'Microsoft YaHei'" font-size="11" fill="#888" font-weight="bold">⚙️ 配置速查</text>
-  <text x="45" y="558" font-family="'Microsoft YaHei'" font-size="10" fill="#666">角色: characters/mao_zedong.yaml · 切换: 设置→切换角色→「毛泽东」</text>
-
-  <!-- 中栏：技术栈 -->
-  <rect x="445" y="520" width="390" height="48" rx="8" fill="#111118" stroke="#222" stroke-width="0.8" opacity="0.6"/>
-  <text x="640" y="542" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#666">技术栈: Open-LLM-VTuber 框架</text>
-  <text x="640" y="558" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#555">TTS: CosyVoice2 · Live2D: mao_pro · LLM: DeepSeek</text>
-
-  <!-- 右栏：框架修改说明 -->
-  <rect x="855" y="520" width="395" height="48" rx="8" fill="#111118" stroke="#222" stroke-width="0.8" opacity="0.6"/>
-  <text x="1052" y="542" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="10" fill="#666">括号过滤: 半角()+全角（） 双重过滤</text>
-  <text x="1052" y="558" text-anchor="middle" font-family="'Microsoft YaHei'" font-size="9" fill="#555">(框架级修改 tts_preprocessor.py)</text>
-
-  <!-- 最底部信息 - 不贴边 -->
-  <text x="640" y="592" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#333">mao-skill v1.4 VTuber Integration · github.com/CochraneK/mao-skill</text>
-
+  <!-- 底部版权 -->
+  <text x="1100" y="485" text-anchor="middle" font-size="10" fill="#666">mao-skill VTuber Mode</text>
 </svg>

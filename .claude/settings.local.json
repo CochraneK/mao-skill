@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(python -m py_compile main.py fetch_news.py dedup_store.py generate_report.py summary_report.py send_email.py utils.py)",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Bash(start *)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(gh search *)",
+      "Bash(gh api *)",
+      "Bash(gh repo *)",
+      "Bash(python sources_manager.py)",
+      "Bash(python digital_human/runner.py --help)",
+      "Bash(python sync.py)",
+      "Bash(python digital_human/runner.py)",
+      "Bash(python digital_human/runner.py web)",
+      "Bash(python digital_human/runner.py build-rag)",
+      "Bash(python sync.py --init)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
