@@ -125,16 +125,38 @@ python digital_human/runner.py tts "你好，我是毛泽东"
 
 ---
 
+## 🔄 Skill 进化工作流
+
+mao-skill 集成了两个进化工具：
+
+### darwin-skill — 质量评估
+```
+/skill https://github.com/alchaincyf/darwin-skill
+```
+- **8维度评分**：Frontmatter、工作流、边界条件、检查点、指令具体性、资源整合、整体架构、实测表现
+- **自动优化**：执行评估→改进→实测验证循环
+
+### nuwa-skill — 思维蒸馏
+```
+/skill https://github.com/alchaincyf/nuwa-skill
+```
+- **造人术**：从人物/主题提炼思维框架，生成新 Skill
+- **需求诊断**：帮你找到合适的蒸馏对象
+
+> 详细说明见 [tools/README.md](tools/README.md)
+
+---
+
 ## 🔮 规划中 / 可优化
 
 | 优先级 | 功能 | 状态 |
 |--------|------|------|
 | ⭐⭐⭐ | 数字人 Web UI (Gradio) | 待开发 |
 | ⭐⭐⭐ | 语音对话 (ASR + TTS) | 待开发 |
-| ⭐⭐ | Live2D 形象集成 | 规划中 |
-| ⭐⭐ | 多角色切换 (周总理等) | 规划中 |
-| ⭐ | Agent 模式自动执行 | 想法 |
-| ⭐ | MCP 服务器化 | 想法 |
+| ⭐⭐ | 用 darwin 评估并优化 SKILL.md | 待执行 |
+| ⭐⭐ | 用 nuwa 扩展新内容 | 待执行 |
+| ⭐ | Live2D 形象集成 | 规划中 |
+| ⭐ | 多角色切换 (周总理等) | 规划中 | |
 
 ---
 
