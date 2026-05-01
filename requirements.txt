@@ -1,0 +1,28 @@
+# mao-skill 依赖
+# 安装: pip install -r requirements.txt
+
+# 核心
+python-dotenv>=1.0.0
+
+# RAG 知识库
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.1.0
+chromadb>=0.4.0
+huggingface-hub>=0.20.0
+
+# 文档处理
+pymupdf>=1.23.0
+pillow>=10.0.0
+pytesseract>=0.3.10
+
+# TTS 语音
+chat-tts>=0.2.0
+edge-tts>=6.1.0
+
+# 可选: 向量模型 (CPU)
+# sentence-transformers>=3.0.0
+
+# 可选: Web UI
+# gradio>=4.0.0
+# streamlit>=1.30.0

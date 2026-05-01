@@ -1,3 +1,34 @@
-# Empty dirs placeholder
-references/sources/
-scripts/
+# mao-skill
+
+# Sync state
+.sync_index.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 运行时生成
+output/
+.vectorstore/
+*.log
+.env
+.env.local
