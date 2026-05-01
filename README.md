@@ -10,22 +10,43 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 快速开始 (Claude Code 用户)
 
 ```bash
-# 1. 初始化
-python sync.py --init
+# 直接加载 Skill
+/skill https://github.com/CochraneK/mao-skill
+```
 
-# 2. 添加你的资料到 docs/user/
-#    - docs/user/books/    ← 放书籍/PDF
-#    - docs/user/notes/    ← 放笔记/txt
-#    - docs/user/images/   ← 放图片
+或者在 Claude Code 中设置：
+```
+Settings → Skills → Add Skill → 粘贴仓库 URL
+```
 
-# 3. 同步到 SKILL.md
-python sync.py --sync
+---
 
-# 4. 查看状态
-python sync.py --status
+## 📖 简介
+
+这是一个 **Claude Code Skill**，让你可以直接用毛泽东的思维方式与 AI 对话。
+
+### 🎯 核心能力
+
+| 能力 | 说明 |
+|------|------|
+| **5大心智模型** | 实践论、矛盾分析法、人民主体论、以弱胜强、辩证法 |
+| **10条决策启发式** | 实事求是、群众路线、矛盾分析等实用思维工具 |
+| **5种表达指纹** | 口语化、比喻、自嘲、反问、接地气 |
+| **双模式系统** | 分析模式（结构化输出）+ 对话模式（第一人称） |
+
+### 💬 使用示例
+
+**分析模式** — 让你分析问题：
+```
+分析当前新能源车市场的竞争格局，用矛盾分析法
+```
+
+**对话模式** — 直接和"毛泽东"聊天：
+```
+你对当代年轻人躺平怎么看？
 ```
 
 ---
@@ -34,68 +55,92 @@ python sync.py --status
 
 ```
 mao-skill/
-├── SKILL.md                    # 主文件
-├── sync.py                     # 增量同步脚本
-├── .sync_index.json            # 同步索引（自动生成）
-├── assets/                     # 配图
+├── SKILL.md              # 🎯 主 Skill 文件 (Claude Code 加载此文件)
+├── sync.py               # 增量同步脚本（维护知识库）
+├── CHANGELOG.md          # 更新日志
+├── requirements.txt      # Python 依赖（数字人模块用）
+├── .env.example          # 环境变量示例
+├── assets/               # 配图
 │   ├── hero-banner.svg
 │   ├── architecture-diagram.svg
 │   ├── pipeline-diagram.svg
 │   └── vtuber-diagram.svg
-└── docs/
-    ├── source/                 # 🔧 蒸馏数据 (01-06)
-    │   └── *.md
-    └── user/                   # 👤 你的资料 (07+)
-        ├── books/              # 书籍/PDF
-        ├── notes/              # 笔记/txt
-        └── images/             # 图片
+├── docs/
+│   ├── source/           # 蒸馏数据（01-07）
+│   └── user/             # 你的知识库（可同步到这里）
+└── digital_human/        # 🔮 数字人模块（开发中）
+    ├── config.py
+    ├── rag.py
+    └── tts.py
 ```
 
 ---
 
-## 📖 使用说明
+## 🔧 进阶用法
 
-### 添加新资料
-
-1. 把文件放入 `docs/user/` 对应目录
-2. 运行 `python sync.py --sync`
-3. 内容自动增量同步到 SKILL.md
-
-### 支持格式
-
-| 目录 | 格式 | 说明 |
-|------|------|------|
-| `books/` | .md, .txt, .pdf | 书籍、文档 |
-| `notes/` | .md, .txt | 笔记 |
-| `images/` | .png, .jpg | 图片（OCR识别文字） |
-
-### 增量同步特性
-
-- ✅ **只同步变更**：新增/修改/删除的文件
-- ✅ **自动编号**：source 01-06，user 从07开始
-- ✅ **内容追踪**：通过 hash 检测变化
-- ✅ **删除检测**：删除文件会自动从 SKILL.md 移除
-
----
-
-## 🔧 命令
+### 添加自己的知识
 
 ```bash
-python sync.py --sync     # 执行同步
-python sync.py --status   # 查看状态
-python sync.py --init     # 初始化目录
-python sync.py --tree     # 查看目录结构
+# 1. 克隆仓库
+git clone https://github.com/CochraneK/mao-skill.git
+cd mao-skill
+
+# 2. 初始化
+python sync.py --init
+
+# 3. 添加你的资料到 docs/user/
+#    - docs/user/books/    ← 放书籍/笔记
+#    - docs/user/notes/    ← 放笔记/txt
+
+# 4. 同步到 SKILL.md
+python sync.py --sync
+```
+
+### 数字人模块 (Beta)
+
+```bash
+# 安装依赖
+pip install -r requirements.txt
+
+# 构建知识库
+python digital_human/runner.py build-rag
+
+# 测试对话
+python digital_human/runner.py chat
+
+# 测试 TTS
+python digital_human/runner.py tts "你好，我是毛泽东"
 ```
 
 ---
 
-## 📚 SKILL.md 结构
+## 📊 版本历史
 
-| 章节 | 内容 |
-|------|------|
-| 一~六 | 核心内容（5模型+10启发式+表达DNA等） |
-| 七 | 知识谱系 ← 同步内容插入位置 |
-| 八 | 人生里程碑 |
+| 版本 | 日期 | 变更 |
+|------|------|------|
+| v1.5.0 | 2026-05-01 | 数字人模块、增量同步、项目结构重构 |
+| v1.4.3 | 2026-04-xx | 初始版本发布 |
+
+完整历史见 [CHANGELOG.md](CHANGELOG.md)
+
+---
+
+## 🔮 规划中 / 可优化
+
+| 优先级 | 功能 | 状态 |
+|--------|------|------|
+| ⭐⭐⭐ | 数字人 Web UI (Gradio) | 待开发 |
+| ⭐⭐⭐ | 语音对话 (ASR + TTS) | 待开发 |
+| ⭐⭐ | Live2D 形象集成 | 规划中 |
+| ⭐⭐ | 多角色切换 (周总理等) | 规划中 |
+| ⭐ | Agent 模式自动执行 | 想法 |
+| ⭐ | MCP 服务器化 | 想法 |
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 PR！
 
 ---
 
