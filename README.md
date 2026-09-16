@@ -37,7 +37,7 @@ git clone https://github.com/CochraneK/mao-skill ~/.claude/skills/mao-zedong-per
 
 ## 📖 简介
 
-这是一个 **Claude Code Skill**，让你可以直接用毛泽东的思维方式与 AI 对话。
+这是一个 **Claude Code Skill**，用于模拟特定历史文本中呈现的方法论、表达习惯与分析框架。
 
 ### 🎯 核心能力
 
