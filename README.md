@@ -5,22 +5,33 @@
 </p>
 
 <p align="center">
-  <strong>用毛泽东的认知框架分析问题、做出判断、给出建议</strong>
+  <strong>历史人物视角模拟 · 方法论整理 · 可复用 Agent Skill</strong>
 </p>
+
+> [!IMPORTANT]
+> 本项目是基于文本资料整理出的**历史人物视角模拟**，不是毛泽东本人，也不应把生成内容当作真实历史发言、权威史料或当代政治意见。涉及历史事实与原文引用时，应回到可核验的一手 / 学术来源。
 
 ---
 
-## 🚀 快速开始 (Claude Code 用户)
+## 🚀 快速开始
+
+### Claude Code / 兼容 Skills 目录的 Agent
+
+项目级安装：
 
 ```bash
-# 直接加载 Skill
-/skill https://github.com/CochraneK/mao-skill
+mkdir -p .claude/skills
+git clone https://github.com/CochraneK/mao-skill .claude/skills/mao-zedong-perspective
 ```
 
-或者在 Claude Code 中设置：
+用户级安装：
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/CochraneK/mao-skill ~/.claude/skills/mao-zedong-perspective
 ```
-Settings → Skills → Add Skill → 粘贴仓库 URL
-```
+
+其他支持 `SKILL.md` 的 Agent，可将本仓库放入对应平台的 Skills 目录。
 
 ---
 
@@ -119,7 +130,7 @@ python digital_human/runner.py tts "你好，我是毛泽东"
 | 版本 | 日期 | 变更 |
 |------|------|------|
 | v1.5.0 | 2026-05-01 | 数字人模块、增量同步、项目结构重构 |
-| v1.4.3 | 2026-04-xx | 初始版本发布 |
+| v1.4.3 | 2026-04 | 初始版本发布 |
 
 完整历史见 [CHANGELOG.md](CHANGELOG.md)
 
